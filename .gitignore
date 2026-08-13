@@ -1,0 +1,9 @@
+node_modules/  
+.venv/  
+venv/  
+**/.venv/  
+**/venv/  
+**/__pycache__/  
+*.db  
+**/*.db  
+firebase-debug.log*  
