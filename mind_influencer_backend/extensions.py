@@ -1,9 +1,0 @@
-﻿"""
-extensions.py — Flask extension instances (created before the app, to avoid circular imports).
-"""
-
-from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
-
-db   = SQLAlchemy()
-cors = CORS()
