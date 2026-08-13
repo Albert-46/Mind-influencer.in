@@ -164,10 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Student Reviews ──────────────────────────────────────────────────────
 
-    // Configuration
-    // Local development: Flask runs on port 5001, FastAPI on 8000
-    // Production: replace with your deployed backend address
-    const BACKEND_URL = "http://localhost:5001";
+    // ── Backend configuration ─────────────────────────────────────────────────
+    // Set this to your deployed FastAPI backend URL, e.g.:
+    // const BACKEND_URL = "https://your-api.onrender.com";
+    // Leave empty to hide the reviews section until a backend is deployed.
+    const BACKEND_URL = "";
 
     // ── XSS-safe text renderer ────────────────────────────────────────────────────
     function escapeHTML(str) {
@@ -203,6 +204,17 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadReviews(courseFilter = "") {
         const container = document.getElementById("reviews-container");
         if (!container) return;
+
+        // If no backend is configured, show a friendly placeholder
+        if (!BACKEND_URL) {
+            container.innerHTML = `
+                <p style="grid-column:1/-1; text-align:center; padding:3rem; color:var(--text);">
+                    <i class="far fa-comment-dots" style="font-size:2.5rem; display:block; margin-bottom:1rem;" aria-hidden="true"></i>
+                    Student reviews are coming soon!<br>
+                    <span style="font-size:0.9rem;">Check back after our full launch.</span>
+                </p>`;
+            return;
+        }
 
         // Show loading skeletons while fetch is in progress
         container.innerHTML = `
@@ -290,6 +302,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // ── Form submit ──────────────────────────────────────────────────────────
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
+
+            // If no backend configured, inform the user
+            if (!BACKEND_URL) {
+                showAlert("error", '<i class="fas fa-info-circle"></i> Reviews are not available yet. Please check back soon!');
+                return;
+            }
 
             // Hide any previous alert
             if (alert) alert.style.display = "none";
