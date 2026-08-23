@@ -182,48 +182,75 @@ ul {
     align-items: center;
 }
 
-.logo-wrapper {
-    display: flex;
+/* ── Shared Brand Lockup ───────────────────────────────────────────────── */
+.brand-lockup {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem; /* Tightened gap between logo and text */
+    gap: 14px;
+    color: white;
     text-decoration: none;
-    flex-wrap: nowrap; /* Prevent stacking on extremely small screens */
+    max-width: 100%;
 }
 
-.main-logo {
-    height: 40px; /* Reduced slightly to match text height better */
-    width: auto;
-    display: block;
+.brand-mark {
+    width: 72px;
+    height: 72px;
     object-fit: contain;
+    flex-shrink: 0;
+    display: block;
 }
 
-
-
-.logo-text {
+.brand-copy {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: flex-start; /* Pin both lines to the same left edge */
+    gap: 4px;
+    min-width: 0; /* allow text to shrink without overflow */
 }
 
 .brand-name {
     font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.6vw, 2.15rem);
     font-weight: 800;
-    font-size: 1.35rem; /* Slightly larger for emphasis */
-    color: var(--navy);
-    line-height: 1; /* Tighter line height to bring tagline closer */
-    letter-spacing: -0.5px;
-    margin-bottom: 2px; /* Minimal space before tagline */
+    line-height: 1;
+    white-space: nowrap;
+    color: inherit;
 }
 
 .brand-tagline {
-    font-size: 0.65rem; /* Slightly smaller for better contrast with name */
-    color: var(--text);
-    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: clamp(0.62rem, 1.1vw, 0.9rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1;
+    color: #d9b85d;
+    white-space: nowrap;
 }
+
+/* ── Navbar brand-lockup variant ───────────────────────────────────────── */
+.navbar-brand-lockup {
+    gap: 10px;
+}
+
+.navbar-brand-mark {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-brand-name {
+    font-size: 1.35rem;
+    color: var(--color-navy);
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand-tagline {
+    font-size: 0.62rem;
+    color: var(--text);
+    letter-spacing: 0.06em;
+}
+
 
 .nav-links {
     display: flex;
@@ -873,27 +900,27 @@ ul {
     margin-bottom: 4rem;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
+/* ── Footer brand-lockup variant ──────────────────────────────────────── */
+.footer-brand-lockup {
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+}
+
+.footer-brand-mark {
+    width: 72px;
+    height: 72px;
 }
 
 .footer-brand-name {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.5rem;
     color: var(--color-white);
 }
 
-.footer-tagline {
-    color: var(--color-gold);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
+.footer-brand-tagline {
+    color: #d9b85d;
+}
+
+.footer-brand {
+    overflow: hidden; /* guard against horizontal overflow on mobile */
 }
 
 .footer-desc {
@@ -901,6 +928,7 @@ ul {
     max-width: 320px;
     font-size: 0.95rem;
 }
+
 
 .footer h4 {
     color: var(--color-white);
@@ -1003,7 +1031,40 @@ ul {
 @media (max-width: 480px) {
     .hero-actions { flex-direction: column; width: 100%; }
     .btn-large { width: 100%; }
+
+    /* Brand lockup — mobile */
+    .brand-lockup {
+        gap: 10px;
+    }
+
+    .footer-brand-mark {
+        width: 52px;
+        height: 52px;
+    }
+
+    .footer-brand-name {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand-tagline {
+        font-size: 0.52rem;
+        letter-spacing: 0.045em;
+    }
+
+    .navbar-brand-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+    .navbar-brand-name {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand-tagline {
+        font-size: 0.55rem;
+    }
 }
+
 
 /* ── Student Reviews Section ────────────────────────────────────────────── */
 .reviews-section {
