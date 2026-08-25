@@ -138,6 +138,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         '<i class="fas fa-check-circle"></i> ' +
                         'Thank you! Your enquiry has been received. We\u2019ll be in touch with you soon.'
                     );
+
+                    // ── Firebase Analytics: track successful enquiry submission ──
+                    // Only fires on a confirmed HTTP 2xx response from Formspree.
+                    // Failed submissions (validation errors, network issues) are NOT tracked.
+                    if (window._firebaseAnalytics) {
+                        window._firebaseAnalytics.logEvent('contact_form_submit', {
+                            course: courseField ? courseField.value : undefined
+                        });
+                    }
+
                     form.reset();
                 } else {
                     // ── Server-side error (4xx / 5xx) ─────────────────────────
