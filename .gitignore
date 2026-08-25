@@ -7,4 +7,8 @@ venv/
 *.db  
 **/*.db  
 firebase-debug.log*  
+.env
 .env.*
+.env.local
+firebase-config.js
+firebase-config.local.js

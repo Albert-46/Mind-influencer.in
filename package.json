@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "firebase": "^12.18.0"
+    "firebase": "^12.18.0",
+    "purgecss": "^8.0.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "terser": "^5.50.0"
   }
 }

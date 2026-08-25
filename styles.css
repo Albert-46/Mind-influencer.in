@@ -73,12 +73,26 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    padding: 8px;
+    z-index: 10000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
@@ -142,10 +156,6 @@ ul {
     background-color: var(--color-navy);
 }
 
-.bg-white {
-    background-color: var(--color-white);
-}
-
 .text-gold {
     color: var(--color-gold) !important;
 }
@@ -203,6 +213,28 @@ ul {
 .btn-outline-navy:hover {
     background-color: var(--color-navy);
     color: var(--color-white);
+}
+
+.btn-gold {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    border-color: var(--color-gold);
+}
+.btn-gold:hover {
+    background-color: var(--color-gold-hover);
+    border-color: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-outline-white:hover {
+    background-color: var(--color-white);
+    color: var(--color-navy);
 }
 
 .btn-block {
@@ -554,8 +586,47 @@ ul {
     line-height: 1.6;
 }
 
+.course-focus {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark);
+}
+
+.course-details-accordion {
+    margin-bottom: 1.5rem;
+}
+
+.course-details-summary {
+    font-weight: 600;
+    color: var(--color-navy);
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-block;
+    padding: 0.5rem 0;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.course-details-summary:hover {
+    color: var(--color-gold);
+}
+
+.course-details-summary:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+}
+
+.course-details-body {
+    padding-top: 1rem;
+}
+
+.course-details-body h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
 .course-features {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -570,7 +641,7 @@ ul {
     color: var(--color-dark);
 }
 
-.course-features li i {
+.course-features li i, .course-features li svg {
     font-size: 1rem;
     margin-top: 0.25rem;
     flex-shrink: 0;
@@ -749,6 +820,27 @@ ul {
 
 .step-title {
     font-size: 1.125rem;
+}
+
+/* Shared CTA Section */
+.shared-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 /* Contact Section */
