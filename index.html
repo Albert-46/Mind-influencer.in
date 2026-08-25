@@ -16,6 +16,20 @@
     <link rel="preload" as="image" imagesrcset="Style-480.webp 480w, Style-768.webp 768w, Style-1200.webp 1200w"
         imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px" fetchpriority="high">
 
+    <!-- Mind Influencer | MIAFL favicon and app icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon-16x16.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32x32.jpg">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="192x192" href="/android-chrome-192x192.jpg">
+    <link rel="icon" type="image/jpeg" sizes="512x512" href="/android-chrome-512x512.jpg">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0A52">
+    <meta name="msapplication-TileColor" content="#0A0A52">
+
     <!-- Firebase Analytics — Modular SDK v12.18.0 -->
     <script type="module" src="firebase-analytics-init.js"></script>
 </head>
@@ -73,6 +87,12 @@
 
     <!-- Hero Section -->
     <main id="main-content">
+        <!-- Launch Banner -->
+        <div class="launch-banner bg-gold text-navy text-center" style="padding: 0.75rem 1rem; font-weight: 600; font-size: 0.95rem;">
+            <span>Now accepting registrations for the first MIAFL launch batch.</span>
+            <span style="font-weight: 400; margin-left: 10px;">Book a free demo and take the first step towards your goal.</span>
+        </div>
+
         <section id="home" class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
@@ -81,8 +101,8 @@
                     <p class="hero-subtitle">Expert-led IELTS, OET, Spoken English, and German Language training for
                         students and professionals preparing for their next opportunity.</p>
                     <div class="hero-actions">
-                        <a href="#courses" class="btn btn-navy btn-large">Explore Courses</a>
-                        <a href="#contact" class="btn btn-outline-navy btn-large">Enquire Now</a>
+                        <a href="#contact" class="btn btn-navy btn-large course-btn">Book a Free Demo</a>
+                        <a href="#contact" class="btn btn-outline-navy btn-large course-btn">Reserve Your Seat</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
@@ -144,10 +164,14 @@
                     <h3 class="founder-name">Dr. Emil Joseph (PT)</h3>
                     <p class="founder-title" style="color: var(--color-navy);">Founder, Mind Influencer | MIAFL</p>
                     <p class="about-text">
-                        Mind Influencer | MIAFL was created to help students and professionals move forward with
-                        clarity,
-                        confidence, and the right preparation for their global ambitions.
+                        Mind Influencer | MIAFL was founded by Dr. Emil Joseph (PT) to support students and healthcare professionals with structured guidance, practical educational resources, career support, and language preparation for global opportunities.
                     </p>
+                    <ul class="about-details" style="list-style-type: disc; margin-left: 20px; margin-top: 15px; color: var(--color-slate); font-size: 1.05rem; line-height: 1.6;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Healthcare Professional:</strong> Qualified Physiotherapist with professional experience in the healthcare sector.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Education & Mentoring:</strong> Strong interest in education, mentoring, and guiding students and healthcare professionals through social media and online platforms.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Professional Experience:</strong> Around two years of experience as a Physiotherapist, with continued learning in international healthcare and language requirements.</li>
+                        <li><strong>The MIAFL Vision:</strong> MIAFL was founded to create a reliable platform where healthcare professionals and students can access proper guidance, educational resources, career support, and opportunities for professional and personal growth.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -166,8 +190,8 @@
                             <p class="course-desc">Structured IELTS coaching for learners preparing for study, work,
                                 migration, and global opportunities.</p>
 
-                            <div class="course-focus">
-                                <strong>Course focus:</strong> Listening, Reading, Writing, Speaking
+                            <div class="course-focus" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <span><strong>Course focus:</strong> Listening, Reading, Writing, Speaking</span>
                             </div>
 
                             <details class="course-details-accordion">
@@ -232,10 +256,9 @@
                             <p class="course-desc">Practical OET coaching for nurses and healthcare professionals
                                 preparing for international opportunities.</p>
 
-                            <div class="course-focus">
-                                <strong>Course structure:</strong> Individual or one-to-one class options.
-                                Real-exam-oriented practice.<br>
-                                <strong>Focus areas:</strong> Listening, Reading, Writing, Speaking
+                            <div class="course-focus" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <span><strong>Course structure:</strong> Individual or one-to-one class options. Real-exam-oriented practice.</span>
+                                <span><strong>Focus areas:</strong> Listening, Reading, Writing, Speaking</span>
                             </div>
 
                             <details class="course-details-accordion">
@@ -301,9 +324,8 @@
                             <p class="course-desc">Build fluency, confidence, and practical communication skills for
                                 daily life, interviews, and professional situations.</p>
 
-                            <div class="course-focus">
-                                <strong>Useful for:</strong> Interviews, Presentations, Public speaking, Daily
-                                conversations
+                            <div class="course-focus" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <span><strong>Useful for:</strong> Interviews, Presentations, Public speaking, Daily conversations</span>
                             </div>
 
                             <details class="course-details-accordion">
@@ -372,10 +394,9 @@
                             <p class="course-desc">Practical German-language coaching for learners preparing for
                                 language study, exams, and international pathways.</p>
 
-                            <div class="course-focus">
-                                <strong>Levels:</strong> A1, A2, B1, B2, TELC speaking preparation<br>
-                                <strong>Focus areas:</strong> Lesen — Reading, Hören — Listening, Schreiben — Writing,
-                                Sprechen — Speaking
+                            <div class="course-focus" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <span><strong>Levels:</strong> A1, A2, B1, B2, TELC speaking preparation</span>
+                                <span><strong>Focus areas:</strong> Lesen — Reading, Hören — Listening, Schreiben — Writing, Sprechen — Speaking</span>
                             </div>
 
                             <details class="course-details-accordion">
@@ -595,7 +616,7 @@
                     <div class="review-form-header">
                         <h3 class="review-form-title">Write a Review</h3>
                         <p class="review-form-subtitle">
-                            Your review will be visible after a quick moderation check (usually within 24 hours).
+                            Student feedback submitted here will be reviewed before publication.
                         </p>
                     </div>
 
