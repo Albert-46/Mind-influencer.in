@@ -153,6 +153,13 @@ section[id] {
     scroll-margin-top: 100px;
 }
 
+/* The review submission area is a div (not section[id]), so it needs
+   its own scroll-margin-top to clear the fixed header when scrolled to
+   by the "Be Our First Reviewer" button. */
+#review-submission-area {
+    scroll-margin-top: 100px;
+}
+
 .section-padding {
     padding: 6rem 0;
 }

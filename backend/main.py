@@ -76,7 +76,7 @@ def submit_review(
         rating=review.rating,
         title=review.title.strip() if review.title else None,
         body=review.body,
-        is_approved=True,  # SET TO TRUE FOR TESTING (Change to False for production)
+        is_approved=False,  # Pending moderation — admin must approve via PATCH /api/admin/reviews/{id}
     )
     db.add(db_review)
     db.commit()

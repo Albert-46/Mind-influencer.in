@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Smooth Scrolling & Focus Management
-    const actionBtns = document.querySelectorAll('a[href^="#"], button[data-focus]');
+    const actionBtns = document.querySelectorAll('a[href^="#"], button[data-focus], #btn-first-reviewer');
     const courseSelect = document.getElementById('course-select');
     
     actionBtns.forEach(btn => {
@@ -67,9 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const reviewForm = document.getElementById('review-submission-area');
                 if (reviewForm) {
-                    reviewForm.scrollIntoView({ behavior: 'smooth' });
+                    // scrollIntoView with block:'start' respects the CSS scroll-margin-top
+                    // set on #review-submission-area, keeping the form clear of the fixed header.
+                    reviewForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Focus the first meaningful field after the scroll animation completes.
                     const nameInput = document.getElementById('review-name');
-                    if (nameInput) setTimeout(() => nameInput.focus(), 500);
+                    if (nameInput) setTimeout(() => nameInput.focus(), 600);
                 }
                 return;
             }
@@ -250,7 +253,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Student Reviews ──────────────────────────────────────────────────────
-    const BACKEND_URL = ""; // Empty string triggers empty launch state
+    // Point to wherever the FastAPI backend is running.
+    // Local dev: http://127.0.0.1:8000  |  Production: https://api.mindinfluencer.in (example)
+    const BACKEND_URL = "http://127.0.0.1:8000";
 
     function escapeHTML(str) {
         const el = document.createElement("div");
@@ -358,8 +363,10 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
 
+            // Guard: only block submission if no backend URL is configured at all.
+            // An empty approved-review list is NOT a reason to disable submission.
             if (!BACKEND_URL) {
-                showReviewAlert("error", '<svg class="fas fa-info-circle" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM224 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm-8 64l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg> Reviews are not available yet. Please check back soon!');
+                showReviewAlert("error", '<svg class="fas fa-info-circle" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM224 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm-8 64l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg> Review submission is not yet configured. Please check back soon.');
                 return;
             }
 
@@ -392,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await res.json().catch(() => ({}));
 
                 if (res.ok || res.status === 201) {
-                    showReviewAlert("success", data.message || "Thank you! Your review will appear after approval.");
+                    showReviewAlert("success", data.message || "Thank you for sharing your experience. Your review has been submitted and will appear once approved.");
                     form.reset();
                     const counter = document.getElementById("body-char-counter");
                     if (counter) counter.textContent = "0 / 2000";
