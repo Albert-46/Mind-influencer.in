@@ -255,7 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Student Reviews ──────────────────────────────────────────────────────
     // Point to wherever the FastAPI backend is running.
     // Local dev: http://127.0.0.1:8000  |  Production: https://api.mindinfluencer.in (example)
-    const BACKEND_URL = "http://127.0.0.1:8000";
+    // API Endpoint for Reviews
+    const BACKEND_URL = "https://mind-influencer-in.onrender.com";
 
     function escapeHTML(str) {
         const el = document.createElement("div");
