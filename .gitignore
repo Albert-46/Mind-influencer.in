@@ -11,5 +11,6 @@ firebase-debug.log*
 .env.*
 !.env.example
 .env.local
+.render-secret.txt
 firebase-config.js
 firebase-config.local.js
