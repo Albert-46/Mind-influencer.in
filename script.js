@@ -332,7 +332,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join("");
 
         } catch (err) {
+            // CASE B: Network/API failure — distinct from "no approved reviews yet".
+            // Do NOT show the launch empty-state for a backend outage.
             console.error("Failed to load reviews:", err);
+            const firstPara  = emptyState.querySelector("p:first-of-type");
+            const secondPara = emptyState.querySelectorAll("p")[1];
+            const firstBtn   = document.getElementById("btn-first-reviewer");
+            if (firstPara)  firstPara.textContent = "Reviews are temporarily unavailable. Please try again later.";
+            if (secondPara) secondPara.style.display = "none";
+            if (firstBtn)   firstBtn.style.display   = "none";
             emptyState.style.display = "block";
             container.classList.add("sr-only");
         }

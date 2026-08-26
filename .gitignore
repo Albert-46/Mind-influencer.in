@@ -9,6 +9,7 @@ venv/
 firebase-debug.log*  
 .env
 .env.*
+!.env.example
 .env.local
 firebase-config.js
 firebase-config.local.js

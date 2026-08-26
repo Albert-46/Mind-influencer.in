@@ -1,0 +1,32 @@
+# render.yaml — Render Blueprint (Infrastructure as Code)
+#
+# Place this file at the repository ROOT (mind-influencer/).
+# Render reads it automatically when you connect the repo.
+#
+# Root directory is the repo root so Python resolves the "backend" package
+# via the relative-import structure already in the codebase.
+# Start command therefore uses:  uvicorn backend.main:app
+
+services:
+  - type: web
+    name: mind-influencer-api
+    runtime: python
+    # Root directory is the repository root (default).
+    # Do NOT set rootDir to "backend" — that would break the relative imports.
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mind-influencer-db
+          property: connectionString
+      - key: ADMIN_API_KEY
+        sync: false          # Set manually in Render dashboard — never commit the value
+      - key: ALLOWED_ORIGINS
+        value: "https://mindinfluencer.in,https://www.mindinfluencer.in,https://mindinfluencer-57ee1.web.app"
+
+databases:
+  - name: mind-influencer-db
+    plan: starter            # $7/month — persistent storage, does NOT expire
+    # Free tier (plan: free) expires after 90 days — NOT used per project spec.
