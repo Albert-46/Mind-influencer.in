@@ -1,21 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Influencer | MIAFL – IELTS, OET, Spoken English & German Coaching in Kerala</title>
+    <title>Mind Influencer | MIAFL â€“ Modern Language & Communication Training</title>
     <meta name="description"
-        content="Mind Influencer | MIAFL offers expert personalised coaching for IELTS, OET, Spoken English, and German in Kerala. Mentoring students and healthcare professionals for global opportunities.">
+        content="Mind Influencer | MIAFL is a growing education startup focused on helping students and professionals build language skills for global opportunities. IELTS, OET, German, Spoken English.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260825_mobile3">
-    <link rel="preload" as="image" imagesrcset="Style-480.webp 480w, Style-768.webp 768w, Style-1200.webp 1200w"
-        imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px" fetchpriority="high">
-
+    <!-- Modern typography: Inter for body, Outfit for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260827_redesign">
+    
     <!-- Mind Influencer | MIAFL favicon and app icons -->
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -24,9 +20,8 @@
     <link rel="manifest" href="./site.webmanifest">
 
     <meta name="theme-color" content="#0A0A52">
-    <meta name="msapplication-TileColor" content="#0A0A52">
 
-    <!-- Firebase Analytics — Modular SDK v12.18.0 -->
+    <!-- Firebase Analytics â€” Modular SDK v12.18.0 -->
     <script type="module" src="./firebase-analytics-init.js"></script>
 
     <!-- Structured Data -->
@@ -35,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Mind Influencer | MIAFL",
-      "description": "Expert personalised coaching for IELTS, OET, Spoken English, and German.",
+      "description": "Language skills for global opportunities. Expert personalised coaching for IELTS, OET, Spoken English, and German.",
       "url": "https://mindinfluencer.in",
       "founder": {
         "@type": "Person",
@@ -43,720 +38,539 @@
       }
     }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "Course",
-          "name": "IELTS Preparation Course",
-          "description": "Structured coaching for study, work, migration, and global opportunities.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Mind Influencer | MIAFL",
-            "sameAs": "https://mindinfluencer.in"
-          }
-        },
-        {
-          "@type": "Course",
-          "name": "OET Preparation Course",
-          "description": "Practical coaching for nurses and healthcare professionals.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Mind Influencer | MIAFL",
-            "sameAs": "https://mindinfluencer.in"
-          }
-        },
-        {
-          "@type": "Course",
-          "name": "Spoken English Course",
-          "description": "Build fluency and confidence for interviews and daily life.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Mind Influencer | MIAFL",
-            "sameAs": "https://mindinfluencer.in"
-          }
-        },
-        {
-          "@type": "Course",
-          "name": "German Language Preparation",
-          "description": "Coaching for language study, exams, and international pathways.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Mind Influencer | MIAFL",
-            "sameAs": "https://mindinfluencer.in"
-          }
-        }
-      ]
-    }
-    </script>
 </head>
-
-<body>
+<body class="smooth-scroll">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header & Navigation -->
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#home" class="brand-lockup navbar-brand-lockup" aria-label="Mind Influencer | MIAFL home">
-                <img src="DOC-LOGO-W.svg" alt="Mind Influencer | MIAFL logo mark" class="brand-mark navbar-brand-mark"
-                    width="843" height="498">
+                <img src="DOC-LOGO-W.svg" alt="Mind Influencer | MIAFL logo mark" class="brand-mark navbar-brand-mark" width="843" height="498">
                 <div class="brand-copy">
                     <span class="brand-name navbar-brand-name">Mind Influencer | MIAFL</span>
-                    <span class="brand-tagline navbar-brand-tagline">Shape Your Mind. Influence Your Future.</span>
                 </div>
             </a>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
+            <div class="nav-links desktop-nav">
+                <a href="#about">Our Story</a>
                 <a href="#courses">Courses</a>
                 <a href="#why-us">Why Us</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#contact" class="btn btn-outline-navy">Enquire Now</a>
+                <a href="#reviews">Community</a>
+                <a href="#contact" class="btn btn-navy">Book a Free Demo</a>
             </div>
 
             <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
-                <svg class="fas fa-bars menu-open-icon" aria-hidden="true" width="1em" height="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                    <path fill="currentColor"
-                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-                </svg>
-                <svg class="fas fa-times menu-close-icon" aria-hidden="true" width="1em" height="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                    <path fill="currentColor"
-                        d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
-                </svg>
+                <svg class="menu-open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg class="menu-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
         </div>
 
         <!-- Mobile Nav -->
         <nav id="mobile-navigation" class="mobile-nav">
-            <a href="#home" class="mobile-nav-link">Home</a>
-            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#about" class="mobile-nav-link">Our Story</a>
             <a href="#courses" class="mobile-nav-link">Courses</a>
             <a href="#why-us" class="mobile-nav-link">Why Us</a>
-            <a href="#reviews" class="mobile-nav-link">Reviews</a>
-            <a href="#contact" class="btn btn-navy mobile-nav-cta">Enquire Now</a>
+            <a href="#reviews" class="mobile-nav-link">Community</a>
+            <a href="#contact" class="btn btn-navy mobile-nav-cta">Book a Free Demo</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <main id="main-content" tabindex="-1">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-background" aria-hidden="true"></div>
-            <div class="hero-overlay" aria-hidden="true"></div>
-            <div class="container hero-container text-center" style="position: relative; z-index: 2;">
+        
+        <!-- Premium Hero Section -->
+        <section id="home" class="hero section-reveal">
+            <div class="hero-bg-pattern"></div>
+            <div class="hero-glow"></div>
+            <div class="container hero-container text-center">
                 <div class="hero-content">
-                    <span class="hero-eyebrow">Your Global Journey Starts Here</span>
-                    <h1 class="hero-title">
-                        <span class="text-white">Confident Communication.</span><br>
-                        <span class="text-gold">Global Opportunities.</span>
+                    <div class="hero-badge fade-up">Building a modern learning ecosystem</div>
+                    <h1 class="hero-title fade-up delay-1">
+                        Language Skills for <br><span class="text-gold gradient-text">Global Opportunities.</span>
                     </h1>
-                    <p class="hero-subtitle">
-                        Personalised IELTS, OET, Spoken English and German language training designed to help you communicate confidently and move towards your global goals.
+                    <p class="hero-subtitle fade-up delay-2">
+                        Online language training designed to help students and professionals communicate confidently and prepare for opportunities beyond borders.
                     </p>
-                    <div class="hero-actions">
+                    <div class="hero-actions fade-up delay-3">
                         <a href="#contact" class="btn btn-gold btn-large" data-focus="name">Book a Free Demo</a>
                         <a href="#courses" class="btn btn-outline-white btn-large secondary-button">Explore Courses</a>
                     </div>
-                    <div class="hero-trust">
-                        <ul class="trust-list-inline" style="list-style: none; padding: 0; margin: 2rem 0 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; color: rgba(255, 255, 255, 0.9); font-weight: 500; font-size: 0.95rem;">
-                            <li><svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="margin-right: 0.5rem; color: var(--color-gold);"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Personalised Training</li>
-                            <li><svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="margin-right: 0.5rem; color: var(--color-gold);"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Expert Guidance</li>
-                            <li><svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="margin-right: 0.5rem; color: var(--color-gold);"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Flexible Learning</li>
-                        </ul>
+                </div>
+            </div>
+            <!-- Decorative connection lines for hero -->
+            <div class="hero-connections">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path class="animated-path" d="M0,150 Q200,50 400,200 T800,100 T1200,250" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                    <path class="animated-path delay" d="M0,250 Q250,350 500,150 T900,300 T1200,150" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Brand Story Section -->
+        <section id="about" class="brand-story section-padding bg-light section-reveal">
+            <div class="container story-container">
+                <div class="story-content fade-in-left">
+                    <h2 class="section-title">More Than Language. <br>A Step Towards Bigger Opportunities.</h2>
+                    <p class="lead-text">
+                        Mind Influencer is a growing education startup focused on helping students and professionals build the language skills and confidence needed to explore opportunities beyond borders.
+                    </p>
+                    <p>
+                        We believe language learning should be more than simply preparing for an examination. It should help people communicate confidently, grow professionally and prepare for the opportunities they want to pursue.
+                    </p>
+                </div>
+                <div class="story-visual fade-in-right">
+                    <div class="abstract-globe">
+                        <div class="globe-ring ring-1"></div>
+                        <div class="globe-ring ring-2"></div>
+                        <div class="globe-ring ring-3"></div>
+                        <div class="globe-node node-a"></div>
+                        <div class="globe-node node-b"></div>
+                        <div class="globe-node node-c"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Built Around Your Goal -->
-        <section id="audiences" class="audiences section-padding bg-light">
+
+        <!-- Startup Positioning -->
+        <section class="positioning section-padding bg-white text-center section-reveal">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Built Around Your Goal</h2>
+                <div class="section-header">
+                    <span class="eyebrow text-gold">Our Approach</span>
+                    <h2 class="section-title">We're Just Getting Started.</h2>
+                    <p class="section-subtitle center-block">
+                        Mind Influencer is building a modern learning ecosystem designed to help learners develop the communication skills needed for international education and careers.
+                    </p>
                 </div>
-                <div class="audience-grid">
-                    <div class="audience-card">
-                        <h3>Students</h3>
-                        <p>IELTS, English and German preparation for education and international opportunities.</p>
+                <div class="startup-advantages-grid">
+                    <div class="advantage-card fade-up">
+                        <div class="adv-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></div>
+                        <h3>Personalised Learning</h3>
+                        <p>Focused attention and modern teaching methods tailored to your goals.</p>
                     </div>
-                    <div class="audience-card">
-                        <h3>Healthcare Professionals</h3>
-                        <p>OET and communication training designed for global healthcare careers.</p>
+                    <div class="advantage-card fade-up delay-1">
+                        <div class="adv-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+                        <h3>Career-Focused</h3>
+                        <p>Language training connected directly to your professional ambitions.</p>
                     </div>
-                    <div class="audience-card">
-                        <h3>Working Professionals</h3>
-                        <p>Improve workplace communication, confidence and professional English.</p>
-                    </div>
-                    <div class="audience-card">
-                        <h3>Global Aspirants</h3>
-                        <p>Build the language skills needed to pursue international opportunities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Why Mind Influencer -->
-        <section id="why-us" class="why-us section-padding bg-navy text-white">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title text-white" style="color: var(--color-white) !important;">Why Mind Influencer | MIAFL?</h2>
-                </div>
-                <div class="trust-grid-text-only">
-                    <div class="trust-text-item">
-                        <h3 style="color: var(--color-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Personalised Training</h3>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Focused attention tailored to your exact learning level.</p>
-                    </div>
-                    <div class="trust-text-item">
-                        <h3 style="color: var(--color-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Expert Guidance</h3>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Learn from experienced mentors dedicated to your success.</p>
-                    </div>
-                    <div class="trust-text-item">
-                        <h3 style="color: var(--color-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Practical Preparation</h3>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Real-world strategies and mock exams for true readiness.</p>
-                    </div>
-                    <div class="trust-text-item">
-                        <h3 style="color: var(--color-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Flexible Learning</h3>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Schedules designed to fit around your busy lifestyle.</p>
-                    </div>
-                    <div class="trust-text-item">
-                        <h3 style="color: var(--color-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Global Focus</h3>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Training aligned with international standards and opportunities.</p>
+                    <div class="advantage-card fade-up delay-2">
+                        <div class="adv-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                        <h3>Flexible Online Training</h3>
+                        <p>Modern remote learning designed to fit your busy schedule.</p>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Courses Section -->
-        <section id="courses" class="courses section-padding">
+        <section id="courses" class="courses section-padding bg-light section-reveal">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Our Courses</h2>
-                    <p class="section-subtitle">Tailored preparation to help you succeed.</p>
+                    <h2 class="section-title">Explore Courses</h2>
+                    <p class="section-subtitle center-block">Premium language programs built for international ambitions.</p>
                 </div>
                 <div class="course-grid">
                     <!-- IELTS -->
-                    <div class="course-card detailed-card">
-                        <div class="course-badge">FREE DEMO AVAILABLE</div>
-                        <h3 class="course-title">IELTS Preparation</h3>
-                        <div class="course-meta">
-                            <strong>Best for:</strong><br>
-                            <span>Study • Work • Migration</span>
-                        </div>
-                        <div class="course-features-block">
-                            <strong>What's included:</strong>
-                            <ul class="course-features">
-                                <li>Personalised training</li>
-                                <li>Speaking practice</li>
-                                <li>Writing feedback</li>
-                                <li>Mock tests</li>
-                                <li>Exam strategies</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-navy course-btn course-link-btn" data-course="IELTS">Explore IELTS &rarr;</a>
+                    <div class="premium-course-card">
+                        <div class="course-icon-bg"><svg width="32" height="32" fill="none" stroke="var(--color-navy)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+                        <h3 class="course-title">IELTS</h3>
+                        <p class="course-desc">Prepare confidently for international education and migration opportunities.</p>
+                        <ul class="course-benefits">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Comprehensive module training</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Academic & General pathways</li>
+                        </ul>
+                        <a href="#contact" class="btn-text-link">Learn More <span>&rarr;</span></a>
                     </div>
                     <!-- OET -->
-                    <div class="course-card detailed-card">
-                        <div class="course-badge">FREE DEMO AVAILABLE</div>
-                        <h3 class="course-title">OET Preparation</h3>
-                        <div class="course-meta">
-                            <strong>Best for:</strong><br>
-                            <span>Nurses • Healthcare Professionals</span>
-                        </div>
-                        <div class="course-features-block">
-                            <strong>What's included:</strong>
-                            <ul class="course-features">
-                                <li>Real-exam-oriented practice</li>
-                                <li>Role plays</li>
-                                <li>Healthcare vocabulary</li>
-                                <li>Daily corrections</li>
-                                <li>Immediate feedback</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-navy course-btn course-link-btn" data-course="OET">Explore OET &rarr;</a>
-                    </div>
-                    <!-- Spoken English -->
-                    <div class="course-card detailed-card">
-                        <div class="course-badge">FREE DEMO AVAILABLE</div>
-                        <h3 class="course-title">Spoken English</h3>
-                        <div class="course-meta">
-                            <strong>Best for:</strong><br>
-                            <span>Interviews • Daily Life • Confidence</span>
-                        </div>
-                        <div class="course-features-block">
-                            <strong>What's included:</strong>
-                            <ul class="course-features">
-                                <li>Individual speaking training</li>
-                                <li>Pronunciation coaching</li>
-                                <li>Fluency-building</li>
-                                <li>Conversation practice</li>
-                                <li>Practical grammar</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-navy course-btn course-link-btn" data-course="Spoken English">Explore Spoken English &rarr;</a>
+                    <div class="premium-course-card">
+                        <div class="course-icon-bg"><svg width="32" height="32" fill="none" stroke="var(--color-navy)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+                        <h3 class="course-title">OET</h3>
+                        <p class="course-desc">Specialised English language preparation designed for healthcare professionals pursuing international opportunities.</p>
+                        <ul class="course-benefits">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Healthcare-specific vocabulary</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Clinical role-play practice</li>
+                        </ul>
+                        <a href="#contact" class="btn-text-link">Learn More <span>&rarr;</span></a>
                     </div>
                     <!-- German -->
-                    <div class="course-card detailed-card">
-                        <div class="course-badge">FREE DEMO AVAILABLE</div>
-                        <h3 class="course-title">German Language Preparation</h3>
-                        <div class="course-meta">
-                            <strong>Best for:</strong><br>
-                            <span>Work in Germany • Study • Migration</span>
-                        </div>
-                        <div class="course-features-block">
-                            <strong>What's included:</strong>
-                            <ul class="course-features">
-                                <li>Levels A1 to B2</li>
-                                <li>TELC speaking preparation</li>
-                                <li>Comprehensive skills support</li>
-                                <li>Daily practice</li>
-                                <li>Discussion topics</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-navy course-btn course-link-btn" data-course="German">Explore German &rarr;</a>
+                    <div class="premium-course-card">
+                        <div class="course-icon-bg"><svg width="32" height="32" fill="none" stroke="var(--color-navy)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                        <h3 class="course-title">German</h3>
+                        <p class="course-desc">Build German language skills for education, career and international opportunities.</p>
+                        <ul class="course-benefits">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> A1 to B2 level training</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> TELC exam preparation</li>
+                        </ul>
+                        <a href="#contact" class="btn-text-link">Learn More <span>&rarr;</span></a>
                     </div>
+                    <!-- Spoken English -->
+                    <div class="premium-course-card">
+                        <div class="course-icon-bg"><svg width="32" height="32" fill="none" stroke="var(--color-navy)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                        <h3 class="course-title">Spoken English</h3>
+                        <p class="course-desc">Develop confidence and practical communication skills for everyday and professional situations.</p>
+                        <ul class="course-benefits">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fluency and pronunciation</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Professional communication</li>
+                        </ul>
+                        <a href="#contact" class="btn-text-link">Learn More <span>&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#contact" class="btn btn-navy">Book a Free Demo Class</a>
                 </div>
             </div>
         </section>
-        <!-- Dedicated Demo CTA -->
-        <section class="demo-cta section-padding bg-light text-center">
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="why-choose section-padding bg-white section-reveal">
             <div class="container">
-                <h2 class="section-title">Not Sure Which Course Is Right For You?</h2>
-                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 2rem auto;">
-                    Book a free demo and speak with our team about your current level, goals and the right learning path.
-                </p>
-                <a href="#contact" class="btn btn-navy" data-focus="name">Book a Free Demo</a>
-            </div>
-        </section>
-        <!-- From Ambition to Action Section -->
-        <section class="process section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">From Ambition to Action</h2>
-                </div>
-                <ol class="visual-timeline">
-                    <li class="timeline-step">
-                        <div class="timeline-number">01</div>
-                        <h3 class="timeline-title">Choose Your Goal</h3>
-                        <p class="timeline-desc">Understand what you're working towards.</p>
-                    </li>
-                    <li class="timeline-step">
-                        <div class="timeline-number">02</div>
-                        <h3 class="timeline-title">Assess Your Level</h3>
-                        <p class="timeline-desc">Identify your current strengths and gaps.</p>
-                    </li>
-                    <li class="timeline-step">
-                        <div class="timeline-number">03</div>
-                        <h3 class="timeline-title">Follow Your Plan</h3>
-                        <p class="timeline-desc">Train with structured, personalised guidance.</p>
-                    </li>
-                    <li class="timeline-step">
-                        <div class="timeline-number">04</div>
-                        <h3 class="timeline-title">Move Forward</h3>
-                        <p class="timeline-desc">Build confidence for your exam, career or international journey.</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-        <!-- A New Journey Section -->
-        <section class="launch-story section-padding bg-navy text-white text-center">
-            <div class="container" style="max-width: 700px;">
-                <h2 class="section-title text-white" style="color: var(--color-white) !important;">A New Journey. A Global Ambition.</h2>
-                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);">
-                    Mind Influencer | MIAFL is beginning its journey with a simple mission &mdash; helping students and professionals build the language confidence they need to pursue opportunities beyond borders.
-                </p>
-                <a href="#contact" class="btn btn-gold">Start Your Journey</a>
-            </div>
-        </section>
-        <!-- Student Reviews Section -->
-        <section id="reviews" class="reviews-section section-padding bg-light">
-            <div class="container">
-                <div class="section-header text-center" style="margin-bottom: 3rem;">
-                    <h2 class="section-title">What Our Students Say</h2>
-                    
-                    <!-- Launch Empty State (Visible by default via JS if no approved reviews) -->
-                    <div id="reviews-empty-state" class="reviews-empty-state" style="max-width: 600px; margin: 2rem auto; background: var(--color-white); padding: 3rem 2rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
-                        <p style="font-size: 1.15rem; font-weight: 600; color: var(--color-navy); margin-bottom: 1rem;">
-                            We're just getting started &mdash; and we'd love for you to be part of the journey.
-                        </p>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 2rem;">
-                            Mind Influencer | MIAFL has just begun its journey. Student reviews and success stories will appear here as our learners begin achieving their goals with us.
-                        </p>
-                        <button type="button" id="btn-first-reviewer" class="btn btn-navy">Be Our First Reviewer</button>
+                <div class="why-grid">
+                    <div class="why-text fade-in-left">
+                        <h2 class="section-title">Why Choose Mind Influencer</h2>
+                        <p class="section-subtitle">We focus on meaningful support, genuine guidance, and helping you achieve your true potential.</p>
+                        <a href="#contact" class="btn btn-outline-navy mt-2" style="margin-top: 1rem;">Talk to an Advisor</a>
                     </div>
-
-                    <!-- Reviews Container (Hidden until reviews exist) -->
-                    <div id="reviews-container" class="reviews-grid sr-only" aria-live="polite">
-                        <!-- Future reviews will render here -->
-                    </div>
-                </div>
-
-                <!-- Review Submission Form -->
-                <div class="review-form-container" id="review-submission-area">
-                    <div class="review-form-header">
-                        <h3 class="review-form-title">Write a Review</h3>
-                        <p class="review-form-subtitle">
-                            Student feedback submitted here will be reviewed before publication.
-                        </p>
-                    </div>
-
-                    <!-- Status message -->
-                    <div class="form-alert" id="review-form-alert" role="status" aria-live="polite"></div>
-
-                    <form id="student-review-form" novalidate>
-                        <div class="review-form-row">
-                            <div class="form-group">
-                                <label for="review-name">Your Name <span aria-hidden="true">*</span></label>
-                                <input type="text" id="review-name" name="student_name" required autocomplete="name"
-                                    placeholder="e.g. Priya M." aria-required="true" minlength="2" maxlength="100">
-                            </div>
-                            <div class="form-group">
-                                <label for="review-course">Course <span aria-hidden="true">*</span></label>
-                                <div class="select-wrapper">
-                                    <select id="review-course" name="course" required aria-required="true">
-                                        <option value="" disabled selected>Select your course&hellip;</option>
-                                        <option value="IELTS">IELTS</option>
-                                        <option value="OET">OET</option>
-                                        <option value="Spoken English">Spoken English</option>
-                                        <option value="German">German</option>
-                                    </select>
-                                    <svg class="fas fa-chevron-down select-icon" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
-                                </div>
+                    <div class="why-features fade-in-right">
+                        <div class="feature-item">
+                            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                            <div class="f-text">
+                                <h3>Career-Focused Learning</h3>
+                                <p>Language training connected to real academic and professional goals.</p>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label id="rating-label">Rating <span aria-hidden="true">*</span></label>
-                            <div class="rating-input" role="radiogroup" aria-labelledby="rating-label" aria-required="true">
-                                <input type="radio" id="star5" name="rating" value="5" aria-label="5 stars"><label for="star5" title="Excellent">&#9733;</label>
-                                <input type="radio" id="star4" name="rating" value="4" aria-label="4 stars"><label for="star4" title="Very Good">&#9733;</label>
-                                <input type="radio" id="star3" name="rating" value="3" aria-label="3 stars"><label for="star3" title="Good">&#9733;</label>
-                                <input type="radio" id="star2" name="rating" value="2" aria-label="2 stars"><label for="star2" title="Fair">&#9733;</label>
-                                <input type="radio" id="star1" name="rating" value="1" aria-label="1 star"><label for="star1" title="Poor">&#9733;</label>
+                        <div class="feature-item">
+                            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                            <div class="f-text">
+                                <h3>Personalised Guidance</h3>
+                                <p>A learning experience designed to provide meaningful support and individual attention.</p>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="review-title">Review Headline <span class="optional-label">(Optional)</span></label>
-                            <input type="text" id="review-title" name="title" placeholder="e.g. Great learning experience" maxlength="150">
+                        <div class="feature-item">
+                            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
+                            <div class="f-text">
+                                <h3>Learn From Anywhere</h3>
+                                <p>Flexible online learning designed for modern students and professionals.</p>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="review-body">Your Review <span aria-hidden="true">*</span></label>
-                            <textarea id="review-body" name="body" rows="5" required aria-required="true" minlength="10" maxlength="2000" placeholder="Tell us about your experience at Mind Influencer | MIAFL. What helped you the most? (min. 10 characters)"></textarea>
-                            <span class="char-counter" id="body-char-counter" aria-live="polite">0 / 2000</span>
+                        <div class="feature-item">
+                            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                            <div class="f-text">
+                                <h3>Built for Global Opportunities</h3>
+                                <p>Language and communication training focused on helping learners prepare for an increasingly international world.</p>
+                            </div>
                         </div>
-
-                        <button type="submit" class="btn btn-navy btn-block form-submit-btn" id="review-submit-btn">
-                            <span class="btn-text">Submit Review</span>
-                            <span class="btn-spinner" aria-hidden="true" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Submitting&hellip;</span>
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Learning Journey Section -->
+        <section class="learning-journey section-padding bg-navy text-white section-reveal">
+            <div class="container text-center">
+                <h2 class="section-title text-white">Your Learning Journey</h2>
+                <p class="section-subtitle center-block text-white" style="opacity:0.8;">A clear, structured path from your first conversation to your global opportunity.</p>
+                
+                <div class="timeline-container mt-4">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-grid">
+                        <div class="timeline-step">
+                            <div class="step-marker">01</div>
+                            <div class="step-content">
+                                <h3>Discover Your Goal</h3>
+                                <p>Understand your academic, professional or international ambitions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-marker">02</div>
+                            <div class="step-content">
+                                <h3>Choose Your Course</h3>
+                                <p>Find the language training that best matches your journey.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-marker">03</div>
+                            <div class="step-content">
+                                <h3>Learn and Practice</h3>
+                                <p>Build knowledge, communication skills and confidence through structured learning.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-marker">04</div>
+                            <div class="step-content">
+                                <h3>Move Forward</h3>
+                                <p>Use your improved language skills to pursue bigger opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4" style="margin-top: 3rem;">
+                    <a href="#contact" class="btn btn-gold">Book a Free Demo Class</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Founder Section -->
-        <section id="about" class="about section-padding">
-            <div class="container about-container">
-                <div class="about-image">
-                    <img src="dr-emil-400.webp" width="400" height="533" alt="Dr. Emil Joseph" class="founder-photo" loading="lazy" decoding="async">
-                    <div class="image-accent"></div>
+        <section class="founder-section section-padding bg-light section-reveal">
+            <div class="container founder-container">
+                <div class="founder-image fade-in-left">
+                    <div class="image-wrapper">
+                        <img src="dr-emil-400.webp" width="400" height="533" alt="Dr. Emil Joseph" loading="lazy">
+                        <div class="founder-accent-pattern"></div>
+                    </div>
                 </div>
-                <div class="about-content">
-                    <h2 class="section-title">Guidance grounded in purpose.</h2>
-                    <h3 class="founder-name">Dr. Emil Joseph (PT)</h3>
-                    <p class="founder-title" style="color: var(--color-navy);">Founder, Mind Influencer | MIAFL</p>
-                    <p class="about-text">
-                        Mind Influencer | MIAFL was founded to support students and healthcare professionals with structured guidance, practical educational resources, career support, and language preparation for global opportunities.
-                    </p>
-                    <ul class="about-details" style="list-style-type: disc; margin-left: 20px; margin-top: 15px; color: var(--color-slate); font-size: 1.05rem; line-height: 1.6;">
-                        <li style="margin-bottom: 0.5rem;"><strong>Healthcare Professional:</strong> Qualified Physiotherapist with direct experience in the healthcare sector.</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Education & Mentoring:</strong> Dedicated to guiding students and healthcare professionals toward international success.</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>The MIAFL Vision:</strong> Creating a reliable platform where professionals and students can access genuine guidance, educational resources, and career support.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- FAQ Section -->
-        <section id="faq" class="faq section-padding bg-light">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                </div>
-                <div class="faq-container">
-                    <details class="faq-item">
-                        <summary>Do you offer one-to-one classes?</summary>
-                        <p>Yes, we focus on personalised training and offer one-to-one options to ensure you get the exact guidance you need.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Can I attend classes online?</summary>
-                        <p>Yes, we offer online classes. Please contact us via WhatsApp to discuss available schedules.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Do you provide a free demo?</summary>
-                        <p>Absolutely. We offer a free assessment and demo class so you can experience our approach before enrolling.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Which IELTS and OET preparation options do you support?</summary>
-                        <p>We provide training for all modules (Listening, Reading, Writing, Speaking) focusing on Study, Work, and Migration pathways.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Do you train healthcare professionals for OET?</summary>
-                        <p>Yes, we provide practical OET coaching specifically tailored for nurses and healthcare professionals.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What German levels do you teach?</summary>
-                        <p>We provide comprehensive German language preparation for levels A1 through B2.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How do I choose the right course?</summary>
-                        <p>Book a free demo. We will assess your current level and goals, and guide you to the correct pathway.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How can I contact Mind Influencer | MIAFL?</summary>
-                        <p>You can reach us through the enquiry form below, chat with us on WhatsApp, email us at info@mindinfluencer.in, or call our office.</p>
-                    </details>
+                <div class="founder-content fade-in-right">
+                    <h2 class="section-title">Built by People Who Believe in Your Potential.</h2>
+                    <h3 class="founder-name mt-3">Dr. Emil Joseph (PT)</h3>
+                    <p class="founder-title text-navy">Founder, Mind Influencer | MIAFL</p>
+                    
+                    <div class="founder-bio">
+                        <p>Mind Influencer was created with a clear vision: to build a reliable platform where professionals and students can access genuine guidance, educational resources, and career support.</p>
+                        <p>As a qualified healthcare professional, I understand the challenges of preparing for international opportunities. We focus on providing structured, practical, and personalised language preparation to help our learners succeed.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Final CTA Section -->
-        <section class="final-cta section-padding bg-navy text-white text-center">
-            <div class="container">
-                <h2 class="section-title text-white" style="color: var(--color-white) !important; margin-bottom: 1rem;">Your Global Journey Starts With One Conversation.</h2>
-                <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem;">
-                    Tell us where you want to go. We'll help you understand the right language pathway to get there.
-                </p>
-                <div class="hero-actions" style="justify-content: center;">
-                    <a href="#contact" class="btn btn-gold" data-focus="name">Book a Free Demo</a>
-                    <a href="#" onclick="window.open('https://wa.me/919207042119', '_blank'); return false;" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
-                        <svg class="fab fa-whatsapp" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="margin-right: 0.5rem;"><path fill="currentColor" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                        Chat on WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-<!-- Enquiry / Contact Section -->
-        <section id="contact" class="contact section-padding">
-            <div class="container contact-container">
-                <div class="contact-info">
-                    <h2 class="section-title">Start Your Journey Today</h2>
-                    <p class="contact-desc">Ready to take the next step? Get in touch with us to book your consultation
-                        or
-                        ask any questions.</p>
 
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><svg class="fas fa-phone-alt" aria-hidden="true" width="1em"
-                                    height="1em" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                                    <path fill="currentColor"
-                                        d="M351.8 25c7.8-18.8 28.4-28.9 48.1-23.5l5.5 1.5c64.6 17.6 119.8 80.2 103.7 156.4-37.1 175-174.8 312.7-349.8 349.8-76.3 16.2-138.8-39.1-156.4-103.7l-1.5-5.5c-5.4-19.7 4.7-40.3 23.5-48.1l97.3-40.5c16.5-6.9 35.6-2.1 47 11.8l38.6 47.2c70.3-34.9 126.8-93.3 159.3-164.9l-44.1-36.1c-13.9-11.3-18.6-30.4-11.8-47L351.8 25z" />
-                                </svg></div>
-                            <div>
-                                <h4>Call Us</h4>
-                                <a href="#" onclick="window.open('tel:+919207042119', '_self'); return false;">+91 9207 042 119</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><svg class="fab fa-whatsapp" aria-hidden="true" width="1em"
-                                    height="1em" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                                    <path fill="currentColor"
-                                        d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z" />
-                                </svg></div>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <a href="#" onclick="window.open('https://wa.me/919207042119', '_blank'); return false;">+91 9207 042 119</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><svg class="fas fa-envelope" aria-hidden="true" width="1em"
-                                    height="1em" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                                    <path fill="currentColor"
-                                        d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" />
-                                </svg></div>
-                            <div>
-                                <h4>Email Us</h4>
-                                <a href="#" onclick="window.open('mailto:info@mindinfluencer.in', '_self'); return false;">info@mindinfluencer.in</a>
-                            </div>
-                        </div>
+        <!-- Founding Batch Section -->
+        <section class="founding-batch section-padding bg-navy section-reveal" style="position:relative; overflow:hidden;">
+            <div class="batch-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            <div class="container text-center founding-batch-content" style="position:relative; z-index:2;">
+                <div class="batch-badge">Exclusive Opportunity</div>
+                <h2 class="section-title text-white mt-2">Join the Founding Batch.</h2>
+                <p class="section-subtitle center-block text-white mt-2" style="opacity:0.9;">
+                    Be among the early learners building the Mind Influencer community. Experience personalized attention, direct guidance, and become part of our foundation.
+                </p>
+                <div class="batch-benefits mt-3">
+                    <span>Early Access</span>
+                    <span class="dot text-gold">â€¢</span>
+                    <span>Personalised Attention</span>
+                    <span class="dot text-gold">â€¢</span>
+                    <span>Direct Guidance</span>
+                </div>
+                <div class="mt-4" style="margin-top: 2rem;">
+                    <a href="#contact" class="btn btn-gold btn-large">Join the Founding Batch</a>
+                </div>
+            </div>
+        </section>
+
+                <!-- Testimonials -->
+        <section id="reviews" class="testimonials section-padding bg-light section-reveal">
+            <div class="container text-center">
+                <h2 class="section-title">The First Stories Are Yet to Be Written.</h2>
+                
+                <div id="reviews-container" class="sr-only"></div>
+                
+                <div id="reviews-empty-state" class="testimonials-empty-state mt-4">
+                    <div class="empty-icon text-gold">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h8"></path><path d="M8 14h4"></path></svg>
+                    </div>
+                    <p class="empty-msg mt-3" style="font-size:1.1rem; color:var(--text); max-width:600px; margin:0 auto;">Mind Influencer is at the beginning of its journey. Our early learners will help shape the next chapter.</p>
+                    <div class="mt-4" style="margin-top: 2rem;">
+                        <button type="button" id="btn-first-reviewer" class="btn btn-outline-navy">Begin Your Story With Us</button>
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper">
-                    <form class="enquiry-form" id="enquiry-form" action="https://formspree.io/f/xljrnbvb" method="POST"
-                        enctype="application/x-www-form-urlencoded" novalidate>
-                        <h3 class="form-title">Send an Enquiry</h3>
+                <div id="review-submission-area" class="review-submission-area mt-5 text-left" style="max-width: 600px; margin: 3rem auto 0; background: var(--color-white); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: left;">
+                    <h3 class="form-title mb-3" style="font-family:var(--font-heading);">Share Your Experience</h3>
+                    <p style="color:var(--color-gray); margin-bottom:1.5rem; font-size:0.95rem;">Your feedback helps us build a better learning experience for future students.</p>
+                    
+                    <div class="form-alert" id="review-form-alert" role="status" style="display:none; padding:1rem; border-radius:8px; margin-bottom:1.5rem;"></div>
 
-                        <!-- Status message area -->
-                        <div class="form-alert" id="form-alert" role="status" aria-live="polite"></div>
-
-                        <!-- Full Name -->
-                        <div class="form-group">
-                            <label for="name">Full Name <span aria-hidden="true">*</span></label>
-                            <input type="text" id="name" name="name" required autocomplete="name"
-                                placeholder="e.g. Priya Menon" aria-required="true">
+                    <form id="student-review-form">
+                        <div class="form-group mb-3">
+                            <label for="review-name" style="display:block; margin-bottom:0.5rem; font-weight:500;">Your Name <span class="text-error">*</span></label>
+                            <input type="text" id="review-name" name="student_name" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px;">
                         </div>
-
-                        <!-- Email -->
-                        <div class="form-group">
-                            <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                            <input type="email" id="email" name="email" required autocomplete="email"
-                                placeholder="e.g. priya@example.com" aria-required="true">
-                        </div>
-
-                        <!-- WhatsApp / Phone -->
-                        <div class="form-group">
-                            <label for="phone">WhatsApp / Phone <span aria-hidden="true">*</span></label>
-                            <input type="tel" id="phone" name="phone" required autocomplete="tel"
-                                placeholder="e.g. +91 98765 43210" aria-required="true">
-                        </div>
-
-                        <!-- I'm interested in -->
-                        <div class="form-group">
-                            <label for="course-select">I'm interested in: <span aria-hidden="true">*</span></label>
-                            <div class="select-wrapper">
-                                <select id="course-select" name="course" required aria-required="true">
-                                    <option value="" disabled selected>Select a course…</option>
+                        <div class="form-group mb-3">
+                            <label for="review-course" style="display:block; margin-bottom:0.5rem; font-weight:500;">Course <span class="text-error">*</span></label>
+                            <div class="select-wrapper" style="position:relative;">
+                                <select id="review-course" name="course" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px; appearance:none; background:#fff;">
+                                    <option value="" disabled selected>Select course...</option>
                                     <option value="IELTS">IELTS</option>
                                     <option value="OET">OET</option>
                                     <option value="Spoken English">Spoken English</option>
                                     <option value="German">German</option>
                                 </select>
-                                <svg class="fas fa-chevron-down select-icon" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
+                                <svg class="select-icon" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); pointer-events:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </div>
                         </div>
-
-                        <!-- My goal -->
-                        <div class="form-group">
-                            <label for="goal-select">My goal: <span aria-hidden="true">*</span></label>
-                            <div class="select-wrapper">
-                                <select id="goal-select" name="goal" required aria-required="true">
-                                    <option value="" disabled selected>Select your goal…</option>
-                                    <option value="study-abroad">Study Abroad</option>
-                                    <option value="healthcare">Healthcare Career</option>
-                                    <option value="germany">Work in Germany</option>
-                                    <option value="global-career">Global Career</option>
-                                    <option value="free-assessment">Book Free Assessment</option>
-                                </select>
-                                <svg class="fas fa-chevron-down select-icon" aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
-                            </div>
+                        <div class="form-group mb-3">
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:500;">Rating <span class="text-error">*</span></label>
+                            <select name="rating" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px;">
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
                         </div>
-
-                        <!-- Message (optional) -->
-                        <div class="form-group">
-                            <label for="message">Message <span class="optional-label">(Optional)</span></label>
-                            <textarea id="message" name="message" rows="4"
-                                placeholder="Tell us about your goals or ask a question…"></textarea>
+                        <div class="form-group mb-3">
+                            <label for="review-body" style="display:block; margin-bottom:0.5rem; font-weight:500;">Your Review <span class="text-error">*</span></label>
+                            <textarea id="review-body" name="body" required rows="4" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px;"></textarea>
+                            <small id="body-char-counter" style="display:block; text-align:right; color:var(--color-gray); margin-top:0.25rem;">0 / 2000</small>
                         </div>
-
-                        <button type="submit" class="btn btn-navy btn-block form-submit-btn" id="submit-btn">
-                            <span class="btn-text">Get My Free Assessment</span>
-                            <span class="btn-spinner" aria-hidden="true" style="display:none;">
-                                <i class="fas fa-spinner fa-spin"></i> Submitting…
-                            </span>
+                        <button type="submit" id="review-submit-btn" class="btn btn-navy" style="width:100%;">
+                            <span class="btn-text">Submit Review</span>
+                            <span class="btn-spinner" style="display:none;">Submitting...</span>
                         </button>
                     </form>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Legal Policy Modal -->
-    <div id="policy-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="policy-modal-title">
-        <div class="modal-overlay" tabindex="-1" data-close-modal></div>
-        <div class="modal-content" role="document">
-            <button type="button" class="modal-close" aria-label="Close modal" data-close-modal>&times;</button>
-            <h2 id="policy-modal-title" class="modal-title">Policy</h2>
-            <div id="policy-modal-body" class="modal-body">
-                <!-- Content injected via JS -->
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="footer bg-navy text-white">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="#home" class="brand-lockup footer-brand-lockup" aria-label="Mind Influencer | MIAFL home">
-                    <img src="DOC LOGO W.svg" alt="Mind Influencer | MIAFL logo mark"
-                        class="brand-mark footer-brand-mark" width="843" height="498" loading="lazy" decoding="async">
-                    <div class="brand-copy">
-                        <span class="brand-name footer-brand-name">Mind Influencer | MIAFL</span>
-                        <span class="brand-tagline footer-brand-tagline">Shape Your Mind. Influence Your Future.</span>
-                    </div>
-                </a>
-                <p class="footer-desc">Confident communication opens the door to global opportunity. Expert coaching for
-                    a brighter future.</p>
-            </div>
-
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/min_dinfluencer/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Follow Mind Influencer | MIAFL on Instagram">
-                        <svg class="fab fa-instagram" aria-hidden="true" width="1em" height="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                            <path fill="currentColor"
-                                d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg>
-                    </a>
-
-                    <a href="https://www.facebook.com/share/1DTMqTsUuL/?mibextid=wwXIfr" target="_blank"
-                        rel="noopener noreferrer" aria-label="Follow Mind Influencer | MIAFL on Facebook">
-                        <svg class="fab fa-facebook-f" aria-hidden="true" width="1em" height="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 320 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                            <path fill="currentColor"
-                                d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z" />
-                        </svg>
-                    </a>
-
-                    <a href="https://www.youtube.com/@MINDINFLUENCER" target="_blank" rel="noopener noreferrer"
-                        aria-label="Subscribe to Mind Influencer | MIAFL on YouTube">
-                        <svg class="fab fa-youtube" aria-hidden="true" width="1em" height="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
-                            <path fill="currentColor"
-                                d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z" />
-                        </svg>
-                    </a>
+        <!-- Final CTA Section -->
+        <section class="final-cta section-padding bg-navy text-white text-center section-reveal" style="position:relative; overflow:hidden;">
+            <div class="cta-glow"></div>
+            <div class="container" style="position:relative; z-index:2;">
+                <h2 class="section-title text-white">Your Next Opportunity Could Start With a Conversation.</h2>
+                <p class="section-subtitle text-white center-block mt-2" style="opacity: 0.9;">
+                    Take the first step towards building stronger language skills, greater confidence and preparing for bigger opportunities.
+                </p>
+                <div class="cta-actions mt-4" style="margin-top: 2rem;">
+                    <a href="#contact" class="btn btn-gold btn-large">Book Your Free Demo Class</a>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> Mind Influencer | MIAFL. All rights
-                    reserved.
-                </p>
-                <div class="footer-legal-links" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; font-size: 0.85rem;">
-                    <button type="button" class="policy-link-btn btn-text-only" data-policy="privacy" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline; background: none; border: none; cursor: pointer; padding: 0;">Privacy Policy</button>
-                    <button type="button" class="policy-link-btn btn-text-only" data-policy="terms" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline; background: none; border: none; cursor: pointer; padding: 0;">Terms & Conditions</button>
-                    <button type="button" class="policy-link-btn btn-text-only" data-policy="refund" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline; background: none; border: none; cursor: pointer; padding: 0;">Refund / Cancellation Policy</button>
+        </section>
+
+        <!-- Enquiry / Contact Section -->
+        <section id="contact" class="contact section-padding bg-white section-reveal">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">Start Your Journey</h2>
+                    <p class="contact-desc mt-2">Ready to take the next step? Get in touch with us to book your demo class or ask any questions.</p>
+
+                    <div class="contact-details mt-4" style="margin-top: 2rem;">
+                        <div class="contact-item">
+                            <div class="contact-icon bg-light text-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <a href="#" onclick="window.open('tel:+919207042119', '_self'); return false;" class="text-navy" style="font-weight:500;">+91 9207 042 119</a>
+                            </div>
+                        </div>
+                        <div class="contact-item mt-3">
+                            <div class="contact-icon bg-light text-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="#" onclick="window.open('https://wa.me/919207042119', '_blank'); return false;" class="text-navy" style="font-weight:500;">+91 9207 042 119</a>
+                            </div>
+                        </div>
+                        <div class="contact-item mt-3">
+                            <div class="contact-icon bg-light text-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <a href="#" onclick="window.open('mailto:info@mindinfluencer.in', '_self'); return false;" class="text-navy" style="font-weight:500;">info@mindinfluencer.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper bg-light" style="padding:2.5rem; border-radius:12px;">
+                    <form class="enquiry-form" id="enquiry-form" action="https://formspree.io/f/xljrnbvb" method="POST">
+                        <h3 class="form-title mb-3">Enquire Now</h3>
+
+                        <div class="form-alert" id="form-alert" role="status"></div>
+
+                        <div class="form-group mb-3">
+                            <label for="name" style="display:block; margin-bottom:0.5rem; font-weight:500;">Full Name <span aria-hidden="true" class="text-error">*</span></label>
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="e.g. Priya Menon" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body);">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="email" style="display:block; margin-bottom:0.5rem; font-weight:500;">Email Address <span aria-hidden="true" class="text-error">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g. priya@example.com" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body);">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="phone" style="display:block; margin-bottom:0.5rem; font-weight:500;">WhatsApp / Phone <span aria-hidden="true" class="text-error">*</span></label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="e.g. +91 98765 43210" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body);">
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="course-select" style="display:block; margin-bottom:0.5rem; font-weight:500;">I'm interested in: <span aria-hidden="true" class="text-error">*</span></label>
+                            <div class="select-wrapper" style="position:relative;">
+                                <select id="course-select" name="course" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body); appearance:none; background:#fff;">
+                                    <option value="" disabled selected>Select a courseâ€¦</option>
+                                    <option value="IELTS">IELTS</option>
+                                    <option value="OET">OET</option>
+                                    <option value="Spoken English">Spoken English</option>
+                                    <option value="German">German</option>
+                                    <option value="Not Sure">Not Sure Yet</option>
+                                </select>
+                                <svg class="select-icon" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); pointer-events:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-navy btn-block form-submit-btn" style="width:100%;">
+                            <span class="btn-text">Submit Enquiry</span>
+                        </button>
+                        <p class="form-disclaimer text-center mt-2" style="font-size:0.85rem; color:var(--text); margin-top:1rem;">We will contact you shortly to confirm your demo.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-navy text-white section-padding" style="padding-bottom: 2rem;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="DOC-LOGO-W.svg" alt="Mind Influencer | MIAFL Logo" class="footer-logo" width="843" height="498" style="max-width:180px; margin-bottom:1rem;">
+                    <p class="footer-desc text-white" style="opacity:0.8; font-size:0.95rem; line-height:1.6;">A modern education startup building language skills and confidence for global opportunities.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="text-gold mb-3">Courses</h4>
+                    <ul class="footer-links" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+                        <li><a href="#courses" class="text-white" style="opacity:0.9; text-decoration:none;">IELTS Preparation</a></li>
+                        <li><a href="#courses" class="text-white" style="opacity:0.9; text-decoration:none;">OET Preparation</a></li>
+                        <li><a href="#courses" class="text-white" style="opacity:0.9; text-decoration:none;">German Language</a></li>
+                        <li><a href="#courses" class="text-white" style="opacity:0.9; text-decoration:none;">Spoken English</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="text-gold mb-3">Company</h4>
+                    <ul class="footer-links" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+                        <li><a href="#about" class="text-white" style="opacity:0.9; text-decoration:none;">Our Story</a></li>
+                        <li><a href="#courses" class="text-white" style="opacity:0.9; text-decoration:none;">Courses</a></li>
+                        <li><a href="#reviews" class="text-white" style="opacity:0.9; text-decoration:none;">Community</a></li>
+                        <li><a href="#contact" class="text-white" style="opacity:0.9; text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="text-gold mb-3">Connect</h4>
+                    <ul class="footer-links" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+                        <li><a href="https://www.instagram.com/min_dinfluencer/" target="_blank" rel="noopener noreferrer" class="text-white" style="opacity:0.9; text-decoration:none;">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@MINDINFLUENCER" target="_blank" rel="noopener noreferrer" class="text-white" style="opacity:0.9; text-decoration:none;">YouTube</a></li>
+                        <li><a href="#" onclick="window.open('https://wa.me/919207042119', '_blank'); return false;" class="text-white" style="opacity:0.9; text-decoration:none;">WhatsApp</a></li>
+                        <li><a href="#" onclick="window.open('mailto:info@mindinfluencer.in', '_self'); return false;" class="text-white" style="opacity:0.9; text-decoration:none;">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+                <div class="footer-legal">
+                    <p style="opacity:0.7; font-size:0.85rem;">&copy; <script>document.write(new Date().getFullYear())</script> Mind Influencer | MIAFL. All rights reserved.</p>
+                </div>
+                <div class="footer-legal-links" style="display:flex; gap:1.5rem;">
+                    <a href="privacy-policy.html" class="text-white" style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Privacy Policy</a>
+                    <a href="terms.html" class="text-white" style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Terms & Conditions</a>
+                    <a href="refund.html" class="text-white" style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Refund Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
+

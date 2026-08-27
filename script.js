@@ -436,6 +436,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Scroll Reveal Animations ─────────────────────────────────────────────
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.fade-up, .fade-in-left, .fade-in-right');
+    animatedElements.forEach(el => revealObserver.observe(el));
+
     // Init
     loadReviews();
     initReviewForm();
