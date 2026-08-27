@@ -1,4 +1,4 @@
-﻿/* 
+/* 
    Mind Influencer - Styling (Redesign)
    Colors: Navy #0A0A52, White #FFFFFF, Gold #D4AF37
    Fonts: Outfit (Headings), Inter (Body)
@@ -415,6 +415,7 @@ section[id] { scroll-margin-top: 100px; }
 .gradient-text {
     background: linear-gradient(90deg, #D4AF37, #F7EBC1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
