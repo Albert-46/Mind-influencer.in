@@ -556,11 +556,18 @@ main {
     height: 100%;
 }
 
+/* Orbital path hover interaction */
+.abstract-globe:has(.globe-node-icon:hover) .globe-ring {
+    border-color: rgba(212, 175, 55, 0.7);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
 .globe-ring {
     position: absolute;
     inset: 0;
-    border: 1px solid rgba(10, 10, 82, 0.1);
+    border: 1px solid #b8972e;
     border-radius: 50%;
+    transition: border-color 0.6s ease, box-shadow 0.6s ease;
 }
 .ring-1 { transform: rotateX(60deg) rotateY(0deg); animation: rotate 20s linear infinite; }
 .ring-2 { transform: rotateX(60deg) rotateY(60deg); animation: rotate 25s linear infinite; }
@@ -571,21 +578,82 @@ main {
     100% { transform: rotateX(60deg) rotateY(360deg) rotateZ(360deg); }
 }
 
-.globe-node {
+/* Orbit Particles */
+.orbit-particle {
     position: absolute;
-    width: 12px; height: 12px;
-    background: var(--color-gold);
+    width: 3px; height: 3px;
+    background: #ffffff;
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--color-gold);
+    box-shadow: 0 0 10px 2px #b8972e, 0 0 20px 4px rgba(212, 175, 55, 0.5);
+    opacity: 0;
 }
-.node-a { top: 20%; left: 20%; animation: pulse 3s infinite; }
-.node-b { top: 60%; right: 10%; animation: pulse 4s infinite 1s; }
-.node-c { bottom: 20%; left: 40%; animation: pulse 3.5s infinite 2s; }
+.p1 { top: -1.5px; left: 50%; animation: particle-fade 12s ease-in-out infinite 2s; }
+.p2 { bottom: -1.5px; left: 20%; animation: particle-fade 15s ease-in-out infinite 5s; }
+.p3 { top: 50%; right: -1.5px; animation: particle-fade 10s ease-in-out infinite 1s; }
 
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.5); opacity: 0.4; }
-    100% { transform: scale(1); opacity: 0.8; }
+@keyframes particle-fade {
+    0%, 100% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Globe Node Containers (for layout and floating) */
+.globe-node-container {
+    position: absolute;
+    width: 34px; height: 34px;
+    z-index: 10;
+}
+.node-a { top: 20%; left: 20%; animation: float-node-a 6s ease-in-out infinite; }
+.node-b { top: 60%; right: 10%; animation: float-node-b 7.3s ease-in-out infinite 1.5s; }
+.node-c { bottom: 20%; left: 40%; animation: float-node-c 8.1s ease-in-out infinite 0.7s; }
+
+@keyframes float-node-a {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+}
+@keyframes float-node-b {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-1.5deg); }
+}
+@keyframes float-node-c {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+/* Globe Node Inner Icons */
+.globe-node-icon {
+    width: 100%; height: 100%;
+    background: var(--color-white, #ffffff);
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-navy);
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    animation: ambient-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-glow {
+    0% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.1); }
+    100% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 22px rgba(212, 175, 55, 0.35); }
+}
+
+.globe-node-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1), 0 0 25px rgba(212, 175, 55, 0.6);
+    animation: none; /* Stop ambient glow on hover */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .node-a, .node-b, .node-c, .orbit-particle, .globe-node-icon, .ring-1, .ring-2, .ring-3 {
+        animation: none !important;
+    }
+    .globe-node-icon:hover {
+        transform: none;
+    }
 }
 
 /* Positioning */
