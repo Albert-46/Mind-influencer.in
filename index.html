@@ -121,13 +121,19 @@
                         class="hero-img">
                 </div>
             </div>
-            <!-- Decorative connection lines for hero -->
-            <div class="hero-connections">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <path class="animated-path" d="M0,150 Q200,50 400,200 T800,100 T1200,250" fill="none"
-                        stroke="rgba(255,255,255,0.05)" stroke-width="2" />
-                    <path class="animated-path delay" d="M0,250 Q250,350 500,150 T900,300 T1200,150" fill="none"
-                        stroke="rgba(212,175,55,0.08)" stroke-width="1.5" />
+            <!-- Decorative connection lines for hero (Updated Orbital Animation) -->
+            <div class="hero-connections" aria-hidden="true">
+                <svg class="hero-orbits" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <g class="orbit-center">
+                        <!-- Central Focal Point -->
+                        <circle cx="500" cy="500" r="2" fill="rgba(212,175,55,0.5)" />
+                        <circle cx="500" cy="500" r="6" fill="none" stroke="rgba(212,175,55,0.3)" stroke-width="1" />
+                        
+                        <!-- 3 Elliptical Orbits -->
+                        <ellipse class="orbit orbit-1" cx="500" cy="500" rx="400" ry="150" fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1" />
+                        <ellipse class="orbit orbit-2" cx="500" cy="500" rx="460" ry="190" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1" />
+                        <ellipse class="orbit orbit-3" cx="500" cy="500" rx="360" ry="130" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1" />
+                    </g>
                 </svg>
             </div>
         </section>
@@ -152,33 +158,36 @@
                         <div class="globe-animation-wrapper">
                             <div class="abstract-globe sophisticated-globe">
                                 <div class="globe-ring ring-1">
-                                    <div class="orbit-particle p1"></div>
+                                    <div class="orbit-node node-a">
+                                        <div class="orbit-node-inner">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="globe-ring ring-2">
-                                    <div class="orbit-particle p2"></div>
+                                    <div class="orbit-node node-b">
+                                        <div class="orbit-node-inner">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                                <path d="M2 12h20"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="globe-ring ring-3">
-                                    <div class="orbit-particle p3"></div>
-                                </div>
-                                <div class="globe-node-container node-a">
-                                    <div class="globe-node-icon">
-                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                                            <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM17 15.9L12 18.64L7 15.9V12.27L12 15L17 12.27V15.9Z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="globe-node-container node-b">
-                                    <div class="globe-node-icon">
-                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.06 19.43 4 16.05 4 12C4 11.38 4.08 10.78 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.77 20 8.64 20 12C20 14.08 19.2 15.97 17.9 17.39Z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="globe-node-container node-c">
-                                    <div class="globe-node-icon">
-                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                                            <path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/>
-                                        </svg>
+                                    <div class="orbit-node node-c">
+                                        <div class="orbit-node-inner">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="9" cy="7" r="4"/>
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

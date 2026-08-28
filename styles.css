@@ -424,21 +424,58 @@ main {
     inset: 0;
     z-index: 1;
     pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.animated-path {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: drawPath 8s linear infinite;
-}
-.animated-path.delay {
-    animation-delay: 4s;
+.hero-orbits {
+    width: 150vw;
+    height: 150vw;
+    max-width: 1400px;
+    max-height: 1400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
 }
 
-@keyframes drawPath {
-    0% { stroke-dashoffset: 2000; }
-    50% { stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: -2000; }
+.orbit {
+    transform-origin: 500px 500px; /* Center of SVG viewBox */
+    transform-box: fill-box;
+}
+
+.orbit-1 {
+    animation: orbitSpin1 45s linear infinite;
+}
+.orbit-2 {
+    animation: orbitSpin2 60s linear infinite reverse;
+}
+.orbit-3 {
+    animation: orbitSpin3 55s linear infinite;
+}
+
+@keyframes orbitSpin1 {
+    from { transform: rotate(15deg); }
+    to { transform: rotate(375deg); }
+}
+
+@keyframes orbitSpin2 {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(405deg); }
+}
+
+@keyframes orbitSpin3 {
+    from { transform: rotate(-20deg); }
+    to { transform: rotate(340deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbit-1 { animation: none; transform: rotate(15deg); }
+    .orbit-2 { animation: none; transform: rotate(45deg); }
+    .orbit-3 { animation: none; transform: rotate(-20deg); }
 }
 
 .hero-content {
@@ -541,7 +578,8 @@ main {
     position: relative;
     width: 100%;
     max-width: 320px;
-    height: 320px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     margin: 1.5rem auto 0;
 }
 
@@ -554,105 +592,109 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-}
-
-/* Orbital path hover interaction */
-.abstract-globe:has(.globe-node-icon:hover) .globe-ring {
-    border-color: rgba(212, 175, 55, 0.7);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+    pointer-events: none;
 }
 
 .globe-ring {
     position: absolute;
     inset: 0;
-    border: 1px solid #b8972e;
+    border: 1px solid rgba(212, 175, 55, 0.25);
     border-radius: 50%;
-    transition: border-color 0.6s ease, box-shadow 0.6s ease;
+    transform-style: preserve-3d;
 }
-.ring-1 { transform: rotateX(60deg) rotateY(0deg); animation: rotate 20s linear infinite; }
-.ring-2 { transform: rotateX(60deg) rotateY(60deg); animation: rotate 25s linear infinite; }
-.ring-3 { transform: rotateX(60deg) rotateY(120deg); animation: rotate 30s linear infinite; }
+.ring-1 { animation: rotateRing1 24s linear infinite; animation-delay: 0s; }
+.ring-2 { animation: rotateRing2 24s linear infinite; animation-delay: -8s; }
+.ring-3 { animation: rotateRing3 24s linear infinite; animation-delay: -16s; }
 
-@keyframes rotate {
-    0% { transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg); }
-    100% { transform: rotateX(60deg) rotateY(360deg) rotateZ(360deg); }
+@keyframes rotateRing1 {
+    from { transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateY(0deg) rotateZ(360deg); }
+}
+@keyframes rotateRing2 {
+    from { transform: rotateX(60deg) rotateY(60deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateY(60deg) rotateZ(360deg); }
+}
+@keyframes rotateRing3 {
+    from { transform: rotateX(60deg) rotateY(120deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateY(120deg) rotateZ(360deg); }
 }
 
-/* Orbit Particles */
-.orbit-particle {
+.orbit-node {
     position: absolute;
-    width: 3px; height: 3px;
-    background: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 10px 2px #b8972e, 0 0 20px 4px rgba(212, 175, 55, 0.5);
-    opacity: 0;
-}
-.p1 { top: -1.5px; left: 50%; animation: particle-fade 12s ease-in-out infinite 2s; }
-.p2 { bottom: -1.5px; left: 20%; animation: particle-fade 15s ease-in-out infinite 5s; }
-.p3 { top: 50%; right: -1.5px; animation: particle-fade 10s ease-in-out infinite 1s; }
-
-@keyframes particle-fade {
-    0%, 100% { opacity: 0; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.5); }
+    width: 0;
+    height: 0;
+    /* Position exactly on the top edge of the ring */
+    top: 0;
+    left: 50%;
 }
 
-/* Globe Node Containers (for layout and floating) */
-.globe-node-container {
+.orbit-node-inner {
     position: absolute;
-    width: 34px; height: 34px;
-    z-index: 10;
-}
-.node-a { top: 20%; left: 20%; animation: float-node-a 6s ease-in-out infinite; }
-.node-b { top: 60%; right: 10%; animation: float-node-b 7.3s ease-in-out infinite 1.5s; }
-.node-c { bottom: 20%; left: 40%; animation: float-node-c 8.1s ease-in-out infinite 0.7s; }
-
-@keyframes float-node-a {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(2deg); }
-}
-@keyframes float-node-b {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(-1.5deg); }
-}
-@keyframes float-node-c {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-6px) rotate(1deg); }
-}
-
-/* Globe Node Inner Icons */
-.globe-node-icon {
-    width: 100%; height: 100%;
-    background: var(--color-white, #ffffff);
+    top: -24px;
+    left: -24px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-navy);
-    cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
-    animation: ambient-glow 4s ease-in-out infinite alternate;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 15px rgba(212, 175, 55, 0.25);
+    color: #0A0A52;
 }
 
-@keyframes ambient-glow {
-    0% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.1); }
-    100% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 22px rgba(212, 175, 55, 0.35); }
+.orbit-node svg {
+    width: 20px;
+    height: 20px;
+    stroke: #0A0A52;
+    stroke-width: 1.8;
+    flex-shrink: 0;
 }
 
-.globe-node-icon:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1), 0 0 25px rgba(212, 175, 55, 0.6);
-    animation: none; /* Stop ambient glow on hover */
+/* 
+ * 3D Counter-rotation to keep icons perfectly upright 
+ * Parent: rotateX(60) rotateY(a) rotateZ(t)
+ * Child: rotateZ(-t) rotateY(-a) rotateX(-60)
+ */
+.node-a { animation: counterRotateNode1 24s linear infinite; animation-delay: 0s; }
+.node-b { animation: counterRotateNode2 24s linear infinite; animation-delay: -8s; }
+.node-c { animation: counterRotateNode3 24s linear infinite; animation-delay: -16s; }
+
+.node-a .orbit-node-inner { animation: pulse-badge 3s infinite; }
+.node-b .orbit-node-inner { animation: pulse-badge 4s infinite 1s; }
+.node-c .orbit-node-inner { animation: pulse-badge 3.5s infinite 2s; }
+
+@keyframes counterRotateNode1 {
+    from { transform: rotateZ(0deg) rotateY(0deg) rotateX(-60deg); }
+    to { transform: rotateZ(-360deg) rotateY(0deg) rotateX(-60deg); }
+}
+@keyframes counterRotateNode2 {
+    from { transform: rotateZ(0deg) rotateY(-60deg) rotateX(-60deg); }
+    to { transform: rotateZ(-360deg) rotateY(-60deg) rotateX(-60deg); }
+}
+@keyframes counterRotateNode3 {
+    from { transform: rotateZ(0deg) rotateY(-120deg) rotateX(-60deg); }
+    to { transform: rotateZ(-360deg) rotateY(-120deg) rotateX(-60deg); }
 }
 
-/* Respect reduced motion */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes pulse-badge {
+    0% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.15); }
+    50% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 20px rgba(212, 175, 55, 0.45); }
+    100% { box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(212, 175, 55, 0.15); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .node-a, .node-b, .node-c, .orbit-particle, .globe-node-icon, .ring-1, .ring-2, .ring-3 {
-        animation: none !important;
-    }
-    .globe-node-icon:hover {
-        transform: none;
+    .ring-1, .ring-2, .ring-3,
+    .node-a, .node-b, .node-c,
+    .orbit-node-inner {
+        animation-play-state: paused !important;
     }
 }
 
