@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms &amp; Conditions | Mind Influencer | MIAFL</title>
+    <meta name="description"
+        content="Read the Terms &amp; Conditions for using the Mind Influencer | MIAFL website and enrolling in language training courses.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0A52">
+
+    <!-- Firebase Analytics -->
+    <script type="module" src="/firebase-analytics-init.js"></script>
+
+    <style>
+        /* Design tokens – mirrors main styles.css */
+        :root {
+            --color-navy:       #0A0A52;
+            --color-navy-light: #15157a;
+            --color-gold:       #D4AF37;
+            --color-gold-hover: #b8972e;
+            --color-white:      #FFFFFF;
+            --color-light:      #F8F9FA;
+            --color-gray:       #555B66;
+            --color-dark:       #1F2229;
+            --border:           #E5E7EB;
+            --shadow-sm:        0 4px 12px rgba(10,10,82,0.05);
+            --shadow-md:        0 8px 24px rgba(10,10,82,0.08);
+            --border-radius:    12px;
+            --font-heading:     'Outfit', sans-serif;
+            --font-body:        'Inter', sans-serif;
+            --navbar-height:    76px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        html, body { max-width: 100%; overflow-x: hidden; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-dark);
+            line-height: 1.7;
+            background-color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: fixed; top: 12px; left: 12px; z-index: 9999;
+            transform: translateY(-200%); transition: transform 0.2s ease;
+            padding: 10px 16px; border-radius: 6px;
+            background: var(--color-navy); color: var(--color-white);
+            text-decoration: none; font-family: var(--font-body);
+        }
+        .skip-link:focus { transform: translateY(0); }
+
+        /* Headings */
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.25; color: var(--color-navy); }
+
+        /* ── Navbar ── */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: var(--color-navy); height: var(--navbar-height);
+            display: flex; align-items: center;
+            box-shadow: 0 2px 20px rgba(10,10,82,0.3);
+        }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; }
+        .brand-lockup {
+            display: flex; align-items: center; gap: 0.75rem;
+            text-decoration: none; flex-shrink: 0;
+        }
+        .brand-mark { height: 38px; width: auto; object-fit: contain; display: block; }
+        .brand-name {
+            font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;
+            color: var(--color-white); white-space: nowrap; line-height: 1.2;
+        }
+        .nav-cta {
+            display: inline-flex; align-items: center; padding: 0.55rem 1.25rem;
+            background: var(--color-gold); color: var(--color-navy);
+            font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;
+            border-radius: 8px; text-decoration: none; transition: background 0.2s ease;
+        }
+        .nav-cta:hover { background: var(--color-gold-hover); }
+        .nav-cta:focus-visible { outline: 3px solid var(--color-gold); outline-offset: 3px; }
+
+        /* ── Page hero band ── */
+        .page-hero {
+            background: var(--color-navy);
+            padding: calc(var(--navbar-height) + 3rem) 0 3rem;
+            text-align: center;
+        }
+        .page-hero h1 {
+            color: var(--color-white);
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: -0.5px;
+        }
+        .page-hero .eyebrow {
+            display: inline-block;
+            color: var(--color-gold);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .page-hero .last-updated {
+            display: block;
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.55);
+            font-size: 0.875rem;
+        }
+
+        /* Back link */
+        .back-link-bar {
+            background: var(--color-light);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0;
+        }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            color: var(--color-navy); text-decoration: none;
+            font-size: 0.875rem; font-weight: 500;
+            transition: gap 0.2s ease;
+        }
+        .back-link:hover { gap: 0.65rem; }
+        .back-link:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 2px; border-radius: 4px; }
+        .back-link svg { flex-shrink: 0; }
+
+        /* ── Main content ── */
+        .policy-main { padding: 4rem 0 5rem; }
+
+        .policy-content {
+            max-width: 760px; margin: 0 auto;
+        }
+
+        .policy-intro {
+            font-size: 1.1rem; color: var(--color-gray);
+            border-left: 4px solid var(--color-gold);
+            padding-left: 1.25rem; margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .policy-section { margin-bottom: 2.75rem; }
+
+        .policy-section h2 {
+            font-size: 1.35rem; margin-bottom: 0.85rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-light);
+            color: var(--color-navy);
+        }
+
+        .policy-section p {
+            color: var(--color-gray); line-height: 1.8; margin-bottom: 0.75rem;
+        }
+        .policy-section p:last-child { margin-bottom: 0; }
+
+        .contact-block {
+            background: var(--color-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem 1.75rem;
+            margin-top: 1rem;
+        }
+        .contact-block a {
+            color: var(--color-navy); font-weight: 600; text-decoration: none;
+            display: block; margin-top: 0.3rem;
+        }
+        .contact-block a:hover { text-decoration: underline; }
+        .contact-block a:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 2px; border-radius: 3px; }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--color-navy); color: var(--color-white);
+            padding: 3.5rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .footer-logo { max-width: 160px; height: auto; display: block; margin-bottom: 1rem; }
+        .footer-desc { opacity: 0.75; font-size: 0.9rem; line-height: 1.7; }
+        .footer-col h4 { font-family: var(--font-heading); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--color-gold); }
+        .footer-links a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; border-radius: 3px; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            display: flex; flex-wrap: wrap; justify-content: space-between;
+            align-items: center; gap: 1rem;
+        }
+        .footer-copy { opacity: 0.6; font-size: 0.82rem; }
+        .footer-legal-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255,255,255,0.6); font-size: 0.82rem; text-decoration: none; transition: color 0.2s; }
+        .footer-legal-links a:hover { color: var(--color-gold); }
+        .footer-legal-links a[aria-current="page"] { color: var(--color-gold); font-weight: 600; }
+        .footer-legal-links a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; border-radius: 3px; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; align-items: flex-start; }
+            .policy-intro { font-size: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navbar -->
+    <header class="navbar" role="banner">
+        <div class="container nav-container">
+            <a href="/" class="brand-lockup" aria-label="Mind Influencer | MIAFL – back to home">
+                <img src="/DOC-LOGO-W.svg" alt="Mind Influencer | MIAFL logo" class="brand-mark" width="843" height="498">
+                <span class="brand-name">Mind Influencer | MIAFL</span>
+            </a>
+            <a href="/#contact" class="nav-cta">Book a Free Demo</a>
+        </div>
+    </header>
+
+    <!-- Back link bar -->
+    <div class="back-link-bar" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="/" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Page hero -->
+    <div class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Legal</span>
+            <h1>Terms &amp; Conditions</h1>
+            <span class="last-updated">Last updated: 31 August 2026</span>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main id="main-content" tabindex="-1">
+        <section class="policy-main" aria-label="Terms and Conditions content">
+            <div class="container">
+                <div class="policy-content">
+
+                    <p class="policy-intro">
+                        By using the Mind Influencer | MIAFL website, submitting an enquiry, booking a demo class, or enrolling in a course, you agree to these Terms &amp; Conditions.
+                    </p>
+
+                    <div class="policy-section">
+                        <h2>1. Website Information</h2>
+                        <p>The website provides general information about Mind Influencer | MIAFL, its language-training courses, and available contact options. Course details, schedules, fees, availability, and learning formats may change and should be confirmed with the team before enrolment.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>2. Enquiries and Demo Classes</h2>
+                        <p>Submitting an enquiry or requesting a demo class does not guarantee admission, a reserved seat, a fixed fee, or a specific class schedule. Our team will contact prospective learners with the applicable details.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>3. Course Enrolment</h2>
+                        <p>Enrolment is subject to course availability, payment requirements, and any conditions communicated at the time of registration. Learners must provide accurate contact and enrolment information.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>4. Learning Outcomes</h2>
+                        <p>Mind Influencer | MIAFL provides structured language training, guidance, practice, and feedback. Individual learning outcomes, examination scores, visa decisions, university admissions, employment outcomes, and migration outcomes cannot be guaranteed.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>5. Student Conduct</h2>
+                        <p>Learners are expected to communicate respectfully with trainers, staff, and fellow learners. Mind Influencer | MIAFL may take appropriate action where behaviour disrupts a safe and productive learning environment.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>6. Intellectual Property</h2>
+                        <p>Website text, branding, logo, graphics, learning materials, and original content belong to Mind Influencer | MIAFL or their respective owners. They may not be copied, reproduced, or distributed without prior written permission.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>7. Third-Party Services</h2>
+                        <p>The website may link to WhatsApp, social platforms, maps, payment platforms, or other third-party services. Mind Influencer | MIAFL is not responsible for the content, privacy practices, or availability of external services.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>8. Changes to These Terms</h2>
+                        <p>We may update these Terms &amp; Conditions when necessary. The latest version will be published on this page.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h2>9. Contact Us</h2>
+                        <p>For questions about these Terms &amp; Conditions, contact:</p>
+                        <div class="contact-block">
+                            <a href="mailto:info@mindinfluencer.in">info@mindinfluencer.in</a>
+                            <a href="tel:+919207042119">+91 9207 042 119</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="/DOC LOGO W.svg" alt="Mind Influencer | MIAFL" class="footer-logo" width="843" height="498">
+                    <p class="footer-desc">A modern education startup building language skills and confidence for global opportunities.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#courses">IELTS Preparation</a></li>
+                        <li><a href="/#courses">OET Preparation</a></li>
+                        <li><a href="/#courses">German Language</a></li>
+                        <li><a href="/#courses">Spoken English</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#about">Our Story</a></li>
+                        <li><a href="/#courses">Courses</a></li>
+                        <li><a href="/#reviews">Community</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/min_dinfluencer/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@MINDINFLUENCER" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://wa.me/919207042119" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="mailto:info@mindinfluencer.in">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Mind Influencer | MIAFL. All rights reserved.</p>
+                <nav class="footer-legal-links" aria-label="Legal pages">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a>
+                    <a href="/refund-policy.html">Refund Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

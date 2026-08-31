@@ -7,6 +7,7 @@
       "**/node_modules/**",
       "backend/**"
     ],
+    "cleanUrls": false,
     "headers": [
       {
         "source": "**/*.@(jpg|jpeg|png|webp|avif|css|js|svg|woff2)",
@@ -18,7 +19,7 @@
         ]
       },
       {
-        "source": "index.html",
+        "source": "**/*.html",
         "headers": [
           {
             "key": "Cache-Control",
