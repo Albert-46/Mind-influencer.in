@@ -29,28 +29,41 @@
     <style>
         /* Design tokens – mirrors main styles.css */
         :root {
-            --color-navy:       #0A0A52;
+            --color-navy: #0A0A52;
             --color-navy-light: #15157a;
-            --color-gold:       #D4AF37;
+            --color-gold: #D4AF37;
             --color-gold-hover: #b8972e;
-            --color-white:      #FFFFFF;
-            --color-light:      #F8F9FA;
-            --color-gray:       #555B66;
-            --color-dark:       #1F2229;
-            --border:           #E5E7EB;
-            --shadow-sm:        0 4px 12px rgba(10,10,82,0.05);
-            --shadow-md:        0 8px 24px rgba(10,10,82,0.08);
-            --border-radius:    12px;
-            --font-heading:     'Outfit', sans-serif;
-            --font-body:        'Inter', sans-serif;
-            --navbar-height:    76px;
+            --color-white: #FFFFFF;
+            --color-light: #F8F9FA;
+            --color-gray: #555B66;
+            --color-dark: #1F2229;
+            --border: #E5E7EB;
+            --shadow-sm: 0 4px 12px rgba(10, 10, 82, 0.05);
+            --shadow-md: 0 8px 24px rgba(10, 10, 82, 0.08);
+            --border-radius: 12px;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --navbar-height: 76px;
         }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
 
-        html, body { max-width: 100%; overflow-x: hidden; }
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
         body {
             font-family: var(--font-body);
@@ -62,43 +75,107 @@
 
         /* Skip link */
         .skip-link {
-            position: fixed; top: 12px; left: 12px; z-index: 9999;
-            transform: translateY(-200%); transition: transform 0.2s ease;
-            padding: 10px 16px; border-radius: 6px;
-            background: var(--color-navy); color: var(--color-white);
-            text-decoration: none; font-family: var(--font-body);
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 9999;
+            transform: translateY(-200%);
+            transition: transform 0.2s ease;
+            padding: 10px 16px;
+            border-radius: 6px;
+            background: var(--color-navy);
+            color: var(--color-white);
+            text-decoration: none;
+            font-family: var(--font-body);
         }
-        .skip-link:focus { transform: translateY(0); }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
 
         /* Headings */
-        h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.25; color: var(--color-navy); }
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--color-navy);
+        }
 
         /* ── Navbar ── */
         .navbar {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            background: var(--color-navy); height: var(--navbar-height);
-            display: flex; align-items: center;
-            box-shadow: 0 2px 20px rgba(10,10,82,0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--color-navy);
+            height: var(--navbar-height);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(10, 10, 82, 0.3);
         }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .nav-container { display: flex; align-items: center; justify-content: space-between; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .brand-lockup {
-            display: flex; align-items: center; gap: 0.75rem;
-            text-decoration: none; flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            flex-shrink: 0;
         }
-        .brand-mark { height: 38px; width: auto; object-fit: contain; display: block; }
+
+        .brand-mark {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
         .brand-name {
-            font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;
-            color: var(--color-white); white-space: nowrap; line-height: 1.2;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-white);
+            white-space: nowrap;
+            line-height: 1.2;
         }
+
         .nav-cta {
-            display: inline-flex; align-items: center; padding: 0.55rem 1.25rem;
-            background: var(--color-gold); color: var(--color-navy);
-            font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;
-            border-radius: 8px; text-decoration: none; transition: background 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.55rem 1.25rem;
+            background: var(--color-gold);
+            color: var(--color-navy);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s ease;
         }
-        .nav-cta:hover { background: var(--color-gold-hover); }
-        .nav-cta:focus-visible { outline: 3px solid var(--color-gold); outline-offset: 3px; }
+
+        .nav-cta:hover {
+            background: var(--color-gold-hover);
+        }
+
+        .nav-cta:focus-visible {
+            outline: 3px solid var(--color-gold);
+            outline-offset: 3px;
+        }
 
         /* ── Page hero band ── */
         .page-hero {
@@ -106,11 +183,13 @@
             padding: calc(var(--navbar-height) + 3rem) 0 3rem;
             text-align: center;
         }
+
         .page-hero h1 {
             color: var(--color-white);
             font-size: clamp(2rem, 5vw, 3rem);
             letter-spacing: -0.5px;
         }
+
         .page-hero .eyebrow {
             display: inline-block;
             color: var(--color-gold);
@@ -121,10 +200,11 @@
             text-transform: uppercase;
             margin-bottom: 0.75rem;
         }
+
         .page-hero .last-updated {
             display: block;
             margin-top: 1rem;
-            color: rgba(255,255,255,0.55);
+            color: rgba(255, 255, 255, 0.55);
             font-size: 0.875rem;
         }
 
@@ -134,27 +214,48 @@
             border-bottom: 1px solid var(--border);
             padding: 0.75rem 0;
         }
+
         .back-link {
-            display: inline-flex; align-items: center; gap: 0.4rem;
-            color: var(--color-navy); text-decoration: none;
-            font-size: 0.875rem; font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--color-navy);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
             transition: gap 0.2s ease;
         }
-        .back-link:hover { gap: 0.65rem; }
-        .back-link:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 2px; border-radius: 4px; }
-        .back-link svg { flex-shrink: 0; }
+
+        .back-link:hover {
+            gap: 0.65rem;
+        }
+
+        .back-link:focus-visible {
+            outline: 3px solid var(--color-navy);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .back-link svg {
+            flex-shrink: 0;
+        }
 
         /* ── Main content ── */
-        .policy-main { padding: 4rem 0 5rem; }
+        .policy-main {
+            padding: 4rem 0 5rem;
+        }
 
         .policy-content {
-            max-width: 760px; margin: 0 auto;
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .policy-intro {
-            font-size: 1.1rem; color: var(--color-gray);
+            font-size: 1.1rem;
+            color: var(--color-gray);
             border-left: 4px solid var(--color-gold);
-            padding-left: 1.25rem; margin-bottom: 3rem;
+            padding-left: 1.25rem;
+            margin-bottom: 3rem;
             line-height: 1.8;
         }
 
@@ -163,19 +264,27 @@
          * To update policy details in future, edit only the <p> text inside
          * the relevant .policy-section block without touching surrounding HTML.
          */
-        .policy-section { margin-bottom: 2.75rem; }
+        .policy-section {
+            margin-bottom: 2.75rem;
+        }
 
         .policy-section h2 {
-            font-size: 1.35rem; margin-bottom: 0.85rem;
+            font-size: 1.35rem;
+            margin-bottom: 0.85rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--color-light);
             color: var(--color-navy);
         }
 
         .policy-section p {
-            color: var(--color-gray); line-height: 1.8; margin-bottom: 0.75rem;
+            color: var(--color-gray);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
         }
-        .policy-section p:last-child { margin-bottom: 0; }
+
+        .policy-section p:last-child {
+            margin-bottom: 0;
+        }
 
         .contact-block {
             background: var(--color-light);
@@ -183,52 +292,149 @@
             padding: 1.5rem 1.75rem;
             margin-top: 1rem;
         }
+
         .contact-block a {
-            color: var(--color-navy); font-weight: 600; text-decoration: none;
-            display: block; margin-top: 0.3rem;
+            color: var(--color-navy);
+            font-weight: 600;
+            text-decoration: none;
+            display: block;
+            margin-top: 0.3rem;
         }
-        .contact-block a:hover { text-decoration: underline; }
-        .contact-block a:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 2px; border-radius: 3px; }
+
+        .contact-block a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-block a:focus-visible {
+            outline: 3px solid var(--color-navy);
+            outline-offset: 2px;
+            border-radius: 3px;
+        }
 
         /* ── Footer ── */
         .footer {
-            background: var(--color-navy); color: var(--color-white);
+            background: var(--color-navy);
+            color: var(--color-white);
             padding: 3.5rem 0 2rem;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 2.5rem;
             margin-bottom: 2.5rem;
         }
-        .footer-logo { max-width: 160px; height: auto; display: block; margin-bottom: 1rem; }
-        .footer-desc { opacity: 0.75; font-size: 0.9rem; line-height: 1.7; }
-        .footer-col h4 { font-family: var(--font-heading); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem; }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-        .footer-links a:hover { color: var(--color-gold); }
-        .footer-links a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; border-radius: 3px; }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 1.5rem;
-            display: flex; flex-wrap: wrap; justify-content: space-between;
-            align-items: center; gap: 1rem;
+
+        .footer-logo {
+            max-width: 160px;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
         }
-        .footer-copy { opacity: 0.6; font-size: 0.82rem; }
-        .footer-legal-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-        .footer-legal-links a { color: rgba(255,255,255,0.6); font-size: 0.82rem; text-decoration: none; transition: color 0.2s; }
-        .footer-legal-links a:hover { color: var(--color-gold); }
-        .footer-legal-links a[aria-current="page"] { color: var(--color-gold); font-weight: 600; }
-        .footer-legal-links a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; border-radius: 3px; }
+
+        .footer-desc {
+            opacity: 0.75;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-links a:focus-visible {
+            outline: 2px solid var(--color-gold);
+            outline-offset: 2px;
+            border-radius: 3px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-copy {
+            opacity: 0.6;
+            font-size: 0.82rem;
+        }
+
+        .footer-legal-links {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal-links a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.82rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-legal-links a[aria-current="page"] {
+            color: var(--color-gold);
+            font-weight: 600;
+        }
+
+        .footer-legal-links a:focus-visible {
+            outline: 2px solid var(--color-gold);
+            outline-offset: 2px;
+            border-radius: 3px;
+        }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+
         @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .footer-bottom { flex-direction: column; align-items: flex-start; }
-            .policy-intro { font-size: 1rem; }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .policy-intro {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -240,7 +446,8 @@
     <header class="navbar" role="banner">
         <div class="container nav-container">
             <a href="/" class="brand-lockup" aria-label="Mind Influencer | MIAFL – back to home">
-                <img src="/DOC-LOGO-W.svg" alt="Mind Influencer | MIAFL logo" class="brand-mark" width="843" height="498">
+                <img src="/DOC LOGO W.svg" alt="Mind Influencer | MIAFL logo" class="brand-mark" width="843"
+                    height="498">
                 <span class="brand-name">Mind Influencer | MIAFL</span>
             </a>
             <a href="/#contact" class="nav-cta">Book a Free Demo</a>
@@ -251,7 +458,8 @@
     <div class="back-link-bar" aria-label="Breadcrumb">
         <div class="container">
             <a href="/" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
                 Back to Home
@@ -275,39 +483,50 @@
                 <div class="policy-content">
 
                     <p class="policy-intro">
-                        Mind Influencer | MIAFL aims to provide clear information about course fees, payments, cancellations, and refunds before enrolment.
+                        Mind Influencer | MIAFL aims to provide clear information about course fees, payments,
+                        cancellations, and refunds before enrolment.
                     </p>
 
                     <!-- Edit the text inside each .policy-section to update policy details without redesigning the page -->
 
                     <div class="policy-section">
                         <h2>1. Fee Confirmation</h2>
-                        <p>Course fees, payment schedules, and applicable terms will be communicated to learners before enrolment or payment. Students should confirm all details before completing payment.</p>
+                        <p>Course fees, payment schedules, and applicable terms will be communicated to learners before
+                            enrolment or payment. Students should confirm all details before completing payment.</p>
                     </div>
 
                     <div class="policy-section">
                         <h2>2. Refund Eligibility</h2>
-                        <p>Refund requests will be reviewed based on the applicable course, payment stage, class commencement status, materials provided, and the circumstances of the request. Eligibility is not automatic and may vary according to the course terms communicated during enrolment.</p>
+                        <p>Refund requests will be reviewed based on the applicable course, payment stage, class
+                            commencement status, materials provided, and the circumstances of the request. Eligibility
+                            is not automatic and may vary according to the course terms communicated during enrolment.
+                        </p>
                     </div>
 
                     <div class="policy-section">
                         <h2>3. Non-Refundable Items</h2>
-                        <p>Where applicable, fees for completed classes, accessed learning materials, administrative services, registration charges, or other services already provided may be non-refundable. Any non-refundable amount should be clearly communicated before payment.</p>
+                        <p>Where applicable, fees for completed classes, accessed learning materials, administrative
+                            services, registration charges, or other services already provided may be non-refundable.
+                            Any non-refundable amount should be clearly communicated before payment.</p>
                     </div>
 
                     <div class="policy-section">
                         <h2>4. Cancellation Before Course Start</h2>
-                        <p>If a learner needs to cancel before the course begins, they should contact Mind Influencer | MIAFL as soon as possible. Any applicable refund or adjustment will be reviewed according to the terms shared at enrolment.</p>
+                        <p>If a learner needs to cancel before the course begins, they should contact Mind Influencer |
+                            MIAFL as soon as possible. Any applicable refund or adjustment will be reviewed according to
+                            the terms shared at enrolment.</p>
                     </div>
 
                     <div class="policy-section">
                         <h2>5. Cancellation After Course Start</h2>
-                        <p>Once classes have started, refunds may be limited or unavailable depending on the number of classes attended, access to materials, and the services already provided.</p>
+                        <p>Once classes have started, refunds may be limited or unavailable depending on the number of
+                            classes attended, access to materials, and the services already provided.</p>
                     </div>
 
                     <div class="policy-section">
                         <h2>6. How to Request a Refund</h2>
-                        <p>To request a refund or discuss a payment concern, contact us with the student name, enrolled course, payment details, and reason for the request:</p>
+                        <p>To request a refund or discuss a payment concern, contact us with the student name, enrolled
+                            course, payment details, and reason for the request:</p>
                         <div class="contact-block">
                             <a href="mailto:info@mindinfluencer.in">info@mindinfluencer.in</a>
                             <a href="tel:+919207042119">+91 9207 042 119</a>
@@ -316,12 +535,15 @@
 
                     <div class="policy-section">
                         <h2>7. Refund Processing</h2>
-                        <p>Where a refund is approved, it will be processed through the appropriate payment method within a reasonable timeframe. Any processing timeline, deductions, or additional conditions will be communicated during the review.</p>
+                        <p>Where a refund is approved, it will be processed through the appropriate payment method
+                            within a reasonable timeframe. Any processing timeline, deductions, or additional conditions
+                            will be communicated during the review.</p>
                     </div>
 
                     <div class="policy-section">
                         <h2>8. Policy Updates</h2>
-                        <p>Mind Influencer | MIAFL may update this Refund Policy when necessary. The latest version will be published on this page.</p>
+                        <p>Mind Influencer | MIAFL may update this Refund Policy when necessary. The latest version will
+                            be published on this page.</p>
                     </div>
 
                 </div>
@@ -334,8 +556,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <img src="/DOC LOGO W.svg" alt="Mind Influencer | MIAFL" class="footer-logo" width="843" height="498">
-                    <p class="footer-desc">A modern education startup building language skills and confidence for global opportunities.</p>
+                    <img src="/DOC LOGO W.svg" alt="Mind Influencer | MIAFL" class="footer-logo" width="843"
+                        height="498">
+                    <p class="footer-desc">A modern education startup building language skills and confidence for global
+                        opportunities.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Courses</h4>
@@ -358,15 +582,21 @@
                 <div class="footer-col">
                     <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="https://www.instagram.com/min_dinfluencer/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@MINDINFLUENCER" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                        <li><a href="https://wa.me/919207042119" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/min_dinfluencer/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@MINDINFLUENCER" target="_blank"
+                                rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://wa.me/919207042119" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </li>
                         <li><a href="mailto:info@mindinfluencer.in">Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Mind Influencer | MIAFL. All rights reserved.</p>
+                <p class="footer-copy">&copy;
+                    <script>document.write(new Date().getFullYear())</script> Mind Influencer | MIAFL. All rights
+                    reserved.
+                </p>
                 <nav class="footer-legal-links" aria-label="Legal pages">
                     <a href="/privacy-policy.html">Privacy Policy</a>
                     <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
