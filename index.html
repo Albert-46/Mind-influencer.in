@@ -822,16 +822,29 @@
                     </p>
                 </div>
                 <div class="footer-legal-links" style="display:flex; gap:1.5rem;">
-                    <a href="privacy-policy.html" class="text-white"
+                    <a href="javascript:void(0)" class="text-white policy-link-btn" data-policy="privacy"
                         style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Privacy Policy</a>
-                    <a href="terms.html" class="text-white"
+                    <a href="javascript:void(0)" class="text-white policy-link-btn" data-policy="terms"
                         style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Terms & Conditions</a>
-                    <a href="refund.html" class="text-white"
+                    <a href="javascript:void(0)" class="text-white policy-link-btn" data-policy="refund"
                         style="opacity:0.7; font-size:0.85rem; text-decoration:none;">Refund Policy</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Policy Modal -->
+    <div id="policy-modal" class="modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="policy-modal-title" class="modal-title"></h5>
+                    <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+                </div>
+                <div id="policy-modal-body" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
