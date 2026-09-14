@@ -14,3 +14,9 @@ firebase-debug.log*
 .render-secret.txt
 firebase-config.js
 firebase-config.local.js
+
+# Developer tooling — local only
+screenshot.js
+
+# Local QA/portfolio screenshot evidence
+portfolio-evidence/
