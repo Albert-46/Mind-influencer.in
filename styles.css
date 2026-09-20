@@ -268,7 +268,10 @@ main {
 /* Header & Navigation */
 .navbar {
     position: fixed;
-    top: 0; left: 0; width: 100%;
+    top: 0; left: 0; 
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -303,6 +306,8 @@ main {
 .brand-copy {
     min-width: 0;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .brand-name {
